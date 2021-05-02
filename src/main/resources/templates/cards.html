@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Cards</h1>
+<table>
+    <tr>
+        <th>CardNumber</th>
+        <th>Code</th>
+    </tr>
+    <th:block th:each="card : ${cards}">
+        <tr>
+            <td th:text="${card.getCardNumber()}"></td>
+            <td th:text="${card.getCode()}"></td>
+        </tr>
+    </th:block>
+</table>
+</body>
+</html>
