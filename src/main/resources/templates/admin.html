@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная</title>
+</head>
+<body>
+<a href="categories">Категории</a>
+<a href="products">Все товары</a>
+
+<form name="Добавить категорию" method="post" action="/admin">
+    <label>
+        <input type="text" name="name"
+               placeholder="Название категории"/>
+    </label>
+    <label>
+        <input type="hidden" name="action" value="add"/>
+    </label>
+    <button type="submit">Add</button>
+</form>
+
+<form name="Удалить категорию" method="post" action="/admin">
+    <label>
+        <input type="text" name="name"
+               placeholder="Название категории"/>
+    </label>
+    <label>
+        <input type="hidden" name="action" value="delete"/>
+    </label>
+    <button type="submit">Delete</button>
+</form>
+
+<form name="Добавить товар" method="post" action="/admin">
+    <label>
+        <input type="text" name="name"
+               placeholder="Название товара"/>
+    </label>
+    <label>
+        <input type="text" name="volume"
+               placeholder="Количество товара"/>
+    </label>
+    <label>
+        <input type="text" name="price"
+               placeholder="Стоимость товара"/>
+    </label>
+    <label>
+        <input type="text" name="category"
+               placeholder="Категория товара"/>
+    </label>
+    <label>
+        <input type="hidden" name="action" value="add_product"/>
+    </label>
+    <button type="submit">Add</button>
+</form>
+
+<form name="Удалить товар" method="post" action="/admin">
+    <label>
+        <input type="text" name="name"
+               placeholder="Название товара"/>
+    </label>
+    <label>
+        <input type="hidden" name="action" value="delete_product"/>
+    </label>
+    <button type="submit">Delete</button>
+</form>
+
+</body>
+</html>

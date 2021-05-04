@@ -26,7 +26,6 @@ public class UserService implements UserDetailsService {
         u.setName(name);
         u.setPassword(bCryptPasswordEncoder.encode(pass));
         userRepository.save(u);
-        System.out.println("Asdasdsahdklasjdklsahdkalshdlashdhaslhdasdsad");
     }
 
     public List<User> readAll() {

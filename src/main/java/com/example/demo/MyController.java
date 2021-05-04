@@ -12,10 +12,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import javax.mail.MessagingException;
 import java.io.IOException;
@@ -35,8 +32,13 @@ public class MyController {
     private UserService uu;
 
     @RequestMapping(path = "/home")
-    public String myinfo() {
-        return "myinfo";
+    public String home() {
+        return "home";
+    }
+
+    @RequestMapping(path = "/admin")
+    public String admin() {
+        return "admin";
     }
 
     @RequestMapping(path = "/categories")
@@ -52,61 +54,47 @@ public class MyController {
     }
 
     @SneakyThrows
-    @GetMapping(path = "/add_category")
-    public String addNewCategory(@RequestParam String name, Model model) {
-        Category category = new Category();
-        category.setName(name);
-        categoryService.create(category);
+    @PostMapping(path = "/admin")
+    public String add_delete(String name, Integer volume, Integer price, String category, @RequestParam String action){
+        switch (action) {
+            case "add" -> {
+                Category cat = new Category();
+                cat.setName(name);
+                categoryService.create(cat);
+            }
+            case "delete" -> categoryService.delete(name);
+            case "add_product" -> {
+                Product prod = new Product();
+                prod.setProductName(name);
+                prod.setProductVolume(volume);
+                prod.setProductVolume(price);
+                prod.setCategory(categoryService.findByName(category));
+                categoryService.findByName(category).getProducts().add(prod);
+                productService.create(prod);
+            }
+            case "delete_product" -> {
+                productService.findByProductName(name).getCategory().getProducts().remove(productService.findByProductName(name));
+                productService.delete(name);
+            }
+        }
         //emailService.sendmail(category);
-        model.addAttribute("categories", categoryService.readAll());
-        return "categories";
+        //model.addAttribute("categories", categoryService.readAll());
+       return "admin";
     }
 
-    @SneakyThrows
-    @GetMapping(path = "/add_product")
-    public String addNewProduct(@RequestParam String name, @RequestParam int volume, @RequestParam int price,
-                                @RequestParam String category, Model model) {
-        Product product = new Product();
-        product.setProductName(name);
-        product.setProductVolume(volume);
-        product.setProductVolume(price);
-        product.setCategory(categoryService.findByName(category));
-        categoryService.findByName(category).getProducts().add(product);
-        productService.create(product);
-        //emailService.sendmail(product);
-        model.addAttribute("products", productService.readAll());
-        return "products";
+    @RequestMapping(value = "/products/takebycategory", method = RequestMethod.GET)
+    public String takenByCategory(@RequestParam int category, Model model) {
+        model.addAttribute("products", cus.takeByCategory(category));
+        return "products/takebycategory";
     }
 
-    @GetMapping(path = "/delete_category")
-    public String DeleteBank(@RequestParam String name, Model model) {
-        categoryService.delete(name);
-        model.addAttribute("categories", categoryService.readAll());
-        return "categories";
-    }
-
-    @GetMapping(path = "/delete_product")
-    public String DeleteProduct(@RequestParam String name, Model model) {
-        productService.findByProductName(name).getCategory().getProducts().remove(productService.findByProductName(name));
-        productService.delete(name);
-        model.addAttribute("products", productService.readAll());
-        return "products";
-    }
-
-    @RequestMapping(value = "/categories/takebyname", method = RequestMethod.GET)
-    public ResponseEntity<List<Category>> takenByName() {
-        return new ResponseEntity<>(cus.takeByName(), HttpStatus.OK);
-    }
-
-    @RequestMapping(value = "/products/takebyproductName", method = RequestMethod.GET)
+    @RequestMapping(value = "/products/takebyname", method = RequestMethod.GET)
     public ResponseEntity<List<Product>> takenByProductName() {
         return new ResponseEntity<>(cus.takeByProductName(), HttpStatus.OK);
     }
 
-    @RequestMapping(value = "/cards/takebycode", method = RequestMethod.GET)
-    public ResponseEntity<List<Product>> takenByCategory_id() {
-        return new ResponseEntity<>(cus.takeByCategory_id(), HttpStatus.OK);
-    }
+
+
 
     @GetMapping("/sign")
     public String index() {

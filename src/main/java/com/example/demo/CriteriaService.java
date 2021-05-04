@@ -1,7 +1,9 @@
 package com.example.demo;
 
 import com.example.demo.category.Category;
+import com.example.demo.category.CategoryService;
 import com.example.demo.product.Product;
+import com.example.demo.product.ProductService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.hibernate.Session;
@@ -11,6 +13,7 @@ import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
 import org.hibernate.query.Query;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import javax.persistence.criteria.CriteriaBuilder;
@@ -24,6 +27,11 @@ import java.util.List;
 @Slf4j
 @Transactional
 public class CriteriaService {
+    @Autowired
+    private CategoryService categoryService;
+    @Autowired
+    private ProductService productService;
+
     private final SessionFactory sessionFactory;
     private Session session;
 
@@ -37,13 +45,13 @@ public class CriteriaService {
         session.close();
     }
 
-    public List<Category> takeByName() {
-        log.info("Find Banks, whose Name includes SDM");
+    public List<Product> takeByCategory(int category) {
+        log.info("Find products, who has this category");
         CriteriaBuilder builder = session.getCriteriaBuilder();
-        CriteriaQuery<Category> orderCriteriaQuery = builder.createQuery(Category.class);
-        Root<Category> root = orderCriteriaQuery.from(Category.class);
-        orderCriteriaQuery.select(root).where(builder.like(root.get("name"), "%SDM%"));
-        Query<Category> query = session.createQuery(orderCriteriaQuery);
+        CriteriaQuery<Product> orderCriteriaQuery = builder.createQuery(Product.class);
+        Root<Product> root = orderCriteriaQuery.from(Product.class);
+        orderCriteriaQuery.select(root).where(builder.equal(root.get("category"), category));
+        Query<Product> query = session.createQuery(orderCriteriaQuery);
         return query.getResultList();
     }
 

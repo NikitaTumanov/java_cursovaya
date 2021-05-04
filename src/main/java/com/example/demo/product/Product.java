@@ -1,6 +1,7 @@
 package com.example.demo.product;
 
 import com.example.demo.category.Category;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 import lombok.Getter;
@@ -19,12 +20,13 @@ public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    @Column(name = "productName", length = 200, nullable = false)
+    @Column(name = "name", length = 200, nullable = false)
     String productName;
-    @Column(name = "productVolume", length = 200, nullable = false)
+    @Column(name = "volume", length = 200, nullable = false)
     int productVolume;
-    @Column(name = "productPrice", length = 200, nullable = false)
+    @Column(name = "price", length = 200, nullable = false)
     int productPrice;
+    @JsonIgnore
     @ManyToOne
     private Category category;
 
