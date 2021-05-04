@@ -1,39 +1,98 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="ru" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <title>Авторизация</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <link href="../static/css/bootstrap.css" th:href="@{/css/bootstrap.css}" rel="stylesheet" />
 </head>
 <body>
 
-<form name="signUpUser" method="post" action="/signUperror">
+<ul class="nav nav-tabs">
+    <li class="nav-item">
+        <a class="nav-link" aria-current="page" href="#">Авторизация</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="categories">Все категории</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="products">Все товары</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#">Корзина</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="admin">Окно админа</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="myinfo">Информация о студенте</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#">Регистрация</a>
+    </li>
+</ul>
 
-    <label for="usernameInput">Username</label>
-    <input class="form-control"
-           id="usernameInput"
-           name="username" type="text" placeholder="username">
-    <div th:if="${Status} == 'user_exists'">
-        Пользователь с таким именем уже существует
-    </div>
-
-    <label for="passwordInput">Password</label>
-    <input class="form-control"
-           id="passwordInput"
-           name="password" type="password"
-           placeholder="password">
-    <label for="matchingPasswordInput">Confirm
-        password</label>
-    <input class="form-control"
-           id="matchingPasswordInput"
-           name="password2" type="password"
-           placeholder="password">
-    <div th:if="${Status} == 'pass1!=pass2'">
-        неправильный пароль подтверждения
-    </div>
-
-    <button type="submit">Sign up</button>
-</form>
-
+<div style="margin: 40px 40px 0 40px;">
+    <form name="signUpUser" method="post" action="/signUperror" style="margin-left: 40px; margin-top: 40px">
+        <div class="row mb-3">
+            <label for="usernameInput" class="form-label">Введите имя</label>
+            <div class="col-sm-10">
+                <input class="form-control"
+                       id="usernameInput"
+                       name="username" type="text" placeholder="Никита">
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label for="mailInput" class="form-label">Введите электронную почту</label>
+            <div class="col-sm-10">
+                <input class="form-control"
+                       id="mailInput"
+                       name="email" type="text" placeholder="tuman0v.nik@yandex.ru">
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label for="passwordInput" class="form-label">Введите пароль</label>
+            <div class="col-sm-10">
+                <input class="form-control"
+                       id="passwordInput"
+                       name="password" type="password"
+                       placeholder="qwerty">
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label for="matchingPasswordInput" class="form-label">Повторите пароль</label>
+            <div class="col-sm-10">
+                <input class="form-control"
+                       id="matchingPasswordInput"
+                       name="password2" type="password"
+                       placeholder="qwerty">
+            </div>
+        </div>
+        <fieldset class="row mb-3">
+            <legend class="col-form-label col-sm-2 pt-0">Права</legend>
+            <div class="col-sm-10">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                    <label class="form-check-label" for="gridRadios1">
+                        User
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                    <label class="form-check-label" for="gridRadios2">
+                        Admin
+                    </label>
+                </div>
+            </div>
+        </fieldset>
+        <button type="submit" class="btn btn-primary">Sign up</button>
+        <div th:if="${Status} == 'user_exists'">
+            Пользователь с таким именем уже существует
+        </div>
+        <div th:if="${Status} == 'pass1!=pass2'">
+            Неправильный пароль подтверждения
+        </div>
+    </form>
+</div>
 </body>
 </html>

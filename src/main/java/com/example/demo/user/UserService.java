@@ -21,10 +21,11 @@ public class UserService implements UserDetailsService {
         return u;
     }
 
-    public void create(String name, String pass) {
+    public void create(String name, String pass, String email) {
         User u = new User();
         u.setName(name);
         u.setPassword(bCryptPasswordEncoder.encode(pass));
+        u.setEmail(email);
         userRepository.save(u);
     }
 

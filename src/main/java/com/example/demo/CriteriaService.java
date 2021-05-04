@@ -45,22 +45,22 @@ public class CriteriaService {
         session.close();
     }
 
-    public List<Product> takeByCategory(int category) {
+    public List<Product> takeByCategory(String category) {
         log.info("Find products, who has this category");
         CriteriaBuilder builder = session.getCriteriaBuilder();
         CriteriaQuery<Product> orderCriteriaQuery = builder.createQuery(Product.class);
         Root<Product> root = orderCriteriaQuery.from(Product.class);
-        orderCriteriaQuery.select(root).where(builder.equal(root.get("category"), category));
+        orderCriteriaQuery.select(root).where(builder.equal(root.get("category"), categoryService.findByName(category).getId()));
         Query<Product> query = session.createQuery(orderCriteriaQuery);
         return query.getResultList();
     }
 
-    public List<Product> takeByProductName() {
-        log.info("Find Cards, whose CardNumber is 123");
+    public List<Product> takeByProductName(String name) {
+        log.info("Find products, who has this name");
         CriteriaBuilder builder = session.getCriteriaBuilder();
         CriteriaQuery<Product> orderCriteriaQuery = builder.createQuery(Product.class);
         Root<Product> root = orderCriteriaQuery.from(Product.class);
-        orderCriteriaQuery.select(root).where(builder.equal(root.get("cardNumber"), 123));
+        orderCriteriaQuery.select(root).where(builder.equal(root.get("productName"), name));
         Query<Product> query = session.createQuery(orderCriteriaQuery);
         return query.getResultList();
     }

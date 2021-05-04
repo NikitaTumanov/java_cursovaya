@@ -30,6 +30,8 @@ public class User implements UserDetails {
     private String name;
     @Column(name = "password", length = 200, nullable = false)
     private String password;
+    @Column(name = "email", length = 200, nullable = false)
+    private String email;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

@@ -31,9 +31,14 @@ public class MyController {
     @Autowired
     private UserService uu;
 
-    @RequestMapping(path = "/home")
-    public String home() {
-        return "home";
+    @RequestMapping(path = "/main")
+    public String main() {
+        return "products";
+    }
+
+    @RequestMapping(path = "/myinfo")
+    public String myinfo() {
+        return "myinfo";
     }
 
     @RequestMapping(path = "/admin")
@@ -83,18 +88,16 @@ public class MyController {
     }
 
     @RequestMapping(value = "/products/takebycategory", method = RequestMethod.GET)
-    public String takenByCategory(@RequestParam int category, Model model) {
+    public String takenByCategory(@RequestParam String category, Model model) {
         model.addAttribute("products", cus.takeByCategory(category));
         return "products/takebycategory";
     }
 
-    @RequestMapping(value = "/products/takebyname", method = RequestMethod.GET)
-    public ResponseEntity<List<Product>> takenByProductName() {
-        return new ResponseEntity<>(cus.takeByProductName(), HttpStatus.OK);
+    @RequestMapping(value = "/products/takebyname", method = RequestMethod.POST)
+    public String takenByProductName(@RequestParam String name, Model model) {
+        model.addAttribute("products", cus.takeByProductName(name));
+        return "products/takebyname";
     }
-
-
-
 
     @GetMapping("/sign")
     public String index() {
@@ -104,11 +107,11 @@ public class MyController {
     @RequestMapping(path = "/", method = RequestMethod.GET)
     public String index2(Authentication authentication, Model model) {
         model.addAttribute("user_name", "Добро пожаловать " + authentication.getName());
-        return "hello";
+        return "products";
     }
 
     @RequestMapping(path = "/signUperror", method = RequestMethod.POST)
-    public String SignUp(@RequestParam String username, String password, String password2, Model model) {
+    public String SignUp(@RequestParam String username, String password, String password2, String email, Model model) {
         if (!password.equals(password2)) {
             model.addAttribute("Status", "pass1!=pass2");
             return "signup";
@@ -117,7 +120,7 @@ public class MyController {
                 model.addAttribute("Status", "user_exists");
                 return "signup";
             } else {
-                uu.create(username, password);
+                uu.create(username, password, email);
                 return "redirect:/";
             }
         }
