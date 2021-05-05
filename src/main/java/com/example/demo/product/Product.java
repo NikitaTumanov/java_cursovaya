@@ -1,5 +1,6 @@
 package com.example.demo.product;
 
+import com.example.demo.basket.Busket;
 import com.example.demo.category.Category;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
@@ -8,6 +9,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Getter
 @Setter
@@ -29,6 +31,10 @@ public class Product {
     @JsonIgnore
     @ManyToOne
     private Category category;
+
+
+    @OneToMany(mappedBy = "product", fetch = FetchType.EAGER)
+    private List<Busket> buskets;
 
     @Override
     public String toString() {

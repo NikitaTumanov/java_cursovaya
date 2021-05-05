@@ -17,7 +17,7 @@ public class ScheduleService {
     private ProductService productService;
 
     @SneakyThrows
-    @Scheduled(cron = "0 0/1 * * * *")
+    @Scheduled(cron = "0 0 13 1 * *")
     @ManagedOperation
     public void update_volume() {
         List<Product> product = cus.takeByCategory("Строительные материалы");

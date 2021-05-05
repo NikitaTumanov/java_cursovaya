@@ -7,8 +7,6 @@ import com.example.demo.product.ProductService;
 import com.example.demo.user.UserService;
 import lombok.SneakyThrows;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,7 +14,6 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.mail.MessagingException;
 import java.io.IOException;
-import java.util.List;
 
 @Controller
 public class MyController {
@@ -27,23 +24,25 @@ public class MyController {
     /*@Autowired
     private EmailService emailService;*/
     @Autowired
-    private CriteriaService cus;
+    private CriteriaService criteriaService;
     @Autowired
-    private UserService uu;
-
-    @RequestMapping(path = "/main")
-    public String main() {
-        return "products";
-    }
+    private UserService userService;
 
     @RequestMapping(path = "/myinfo")
-    public String myinfo() {
+    public String myinfo(Authentication authentication,Model model) {
+        model.addAttribute("user", userService.findByName(authentication.getName()));
         return "myinfo";
     }
 
     @RequestMapping(path = "/admin")
-    public String admin() {
-        return "admin";
+    public String admin(Authentication authentication, Model model) {
+        if(userService.findByName(authentication.getName()).getType().equals("admin")){
+            return "admin";
+        }
+        else{
+            model.addAttribute("products", productService.readAll());
+            return "products";
+        }
     }
 
     @RequestMapping(path = "/categories")
@@ -72,7 +71,7 @@ public class MyController {
                 Product prod = new Product();
                 prod.setProductName(name);
                 prod.setProductVolume(volume);
-                prod.setProductVolume(price);
+                prod.setProductPrice(price);
                 prod.setCategory(categoryService.findByName(category));
                 categoryService.findByName(category).getProducts().add(prod);
                 productService.create(prod);
@@ -89,13 +88,13 @@ public class MyController {
 
     @RequestMapping(value = "/products/takebycategory", method = RequestMethod.GET)
     public String takenByCategory(@RequestParam String category, Model model) {
-        model.addAttribute("products", cus.takeByCategory(category));
+        model.addAttribute("products", criteriaService.takeByCategory(category));
         return "products/takebycategory";
     }
 
     @RequestMapping(value = "/products/takebyname", method = RequestMethod.POST)
     public String takenByProductName(@RequestParam String name, Model model) {
-        model.addAttribute("products", cus.takeByProductName(name));
+        model.addAttribute("products", criteriaService.takeByProductName(name));
         return "products/takebyname";
     }
 
@@ -105,22 +104,22 @@ public class MyController {
     }
 
     @RequestMapping(path = "/", method = RequestMethod.GET)
-    public String index2(Authentication authentication, Model model) {
-        model.addAttribute("user_name", "Добро пожаловать " + authentication.getName());
+    public String index2(Model model) {
+        model.addAttribute("products", productService.readAll());
         return "products";
     }
 
     @RequestMapping(path = "/signUperror", method = RequestMethod.POST)
-    public String SignUp(@RequestParam String username, String password, String password2, String email, Model model) {
+    public String SignUp(@RequestParam String username, String password, String password2, String email, String type, Model model) {
         if (!password.equals(password2)) {
             model.addAttribute("Status", "pass1!=pass2");
             return "signup";
         } else {
-            if (uu.loadUserByUsername(username) != null) {
+            if (userService.loadUserByUsername(username) != null) {
                 model.addAttribute("Status", "user_exists");
                 return "signup";
             } else {
-                uu.create(username, password, email);
+                userService.create(username, password, email, type);
                 return "redirect:/";
             }
         }

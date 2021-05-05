@@ -8,7 +8,7 @@
 <body>
 <ul class="nav nav-tabs">
     <li class="nav-item">
-        <a class="nav-link" aria-current="page" href="#">Авторизация</a>
+        <a class="nav-link" aria-current="page" href="login">Сменить аккаунт</a>
     </li>
     <li class="nav-item">
         <a class="nav-link" href="categories">Все категории</a>
@@ -23,10 +23,10 @@
         <a class="nav-link" href="admin">Окно админа</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="myinfo">Информация о студенте</a>
+        <a class="nav-link" href="myinfo">Информация о пользователе</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" aria-current="page" href="sign">Регистрация</a>
+        <a class="nav-link" aria-current="page" href="sign">Создать аккаунт</a>
     </li>
 </ul>
 
@@ -44,15 +44,29 @@
             <th>Название товара</th>
             <th>Цена</th>
             <th>Количество</th>
+            <th></th>
         </tr>
         <th:block th:each="product : ${products}">
             <tr>
                 <td th:text="${product.getProductName()}"></td>
                 <td th:text="${product.getProductPrice()}"></td>
                 <td th:text="${product.getProductVolume()}"></td>
+                <td>
+                    <form name="Добавить в корзину" method="post" action="/products/takebyname">
+                        <label>
+                            <input type="number" name="volume" min="1" th:max="${product.getProductVolume()}"/>
+                        </label>
+                        <button type="submit">Добавить в корзину</button>
+                    </form>
+                </td>
             </tr>
         </th:block>
     </table>
 </div>
+<footer class="footer mt-auto py-3 bg-light" style="position: absolute; left: 0; bottom: 0; width: 100%; height: 80px;">
+    <div class="container">
+        <span class="text-muted">Работу выполнил студент группы ИКБО-01-19: Туманов Н.А.</span>
+    </div>
+</footer>
 </body>
 </html>

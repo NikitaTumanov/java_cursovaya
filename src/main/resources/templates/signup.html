@@ -10,7 +10,7 @@
 
 <ul class="nav nav-tabs">
     <li class="nav-item">
-        <a class="nav-link" aria-current="page" href="#">Авторизация</a>
+        <a class="nav-link" aria-current="page" href="login">Сменить аккаунт</a>
     </li>
     <li class="nav-item">
         <a class="nav-link" href="categories">Все категории</a>
@@ -25,10 +25,10 @@
         <a class="nav-link" href="admin">Окно админа</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="myinfo">Информация о студенте</a>
+        <a class="nav-link" href="myinfo">Информация о пользователе</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="#">Регистрация</a>
+        <a class="nav-link active" aria-current="page" href="#">Создать аккаунт</a>
     </li>
 </ul>
 
@@ -39,7 +39,8 @@
             <div class="col-sm-10">
                 <input class="form-control"
                        id="usernameInput"
-                       name="username" type="text" placeholder="Никита">
+                       name="username" type="text"
+                       required placeholder="Никита">
             </div>
         </div>
         <div class="row mb-3">
@@ -47,7 +48,8 @@
             <div class="col-sm-10">
                 <input class="form-control"
                        id="mailInput"
-                       name="email" type="text" placeholder="tuman0v.nik@yandex.ru">
+                       name="email" type="text"
+                       required placeholder="tuman0v.nik@yandex.ru">
             </div>
         </div>
         <div class="row mb-3">
@@ -56,7 +58,7 @@
                 <input class="form-control"
                        id="passwordInput"
                        name="password" type="password"
-                       placeholder="qwerty">
+                       required placeholder="qwerty">
             </div>
         </div>
         <div class="row mb-3">
@@ -65,20 +67,20 @@
                 <input class="form-control"
                        id="matchingPasswordInput"
                        name="password2" type="password"
-                       placeholder="qwerty">
+                       required placeholder="qwerty">
             </div>
         </div>
         <fieldset class="row mb-3">
             <legend class="col-form-label col-sm-2 pt-0">Права</legend>
             <div class="col-sm-10">
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                    <input class="form-check-input" type="radio" name="type" id="gridRadios1" value="user" checked>
                     <label class="form-check-label" for="gridRadios1">
                         User
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                    <input class="form-check-input" type="radio" name="type" id="gridRadios2" value="admin">
                     <label class="form-check-label" for="gridRadios2">
                         Admin
                     </label>
@@ -94,5 +96,10 @@
         </div>
     </form>
 </div>
+<footer class="footer mt-auto py-3 bg-light" style="position: absolute; left: 0; bottom: 0; width: 100%; height: 80px;">
+    <div class="container">
+        <span class="text-muted">Работу выполнил студент группы ИКБО-01-19: Туманов Н.А.</span>
+    </div>
+</footer>
 </body>
 </html>

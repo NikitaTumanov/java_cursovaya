@@ -1,5 +1,6 @@
 package com.example.demo.user;
 
+import com.example.demo.basket.Busket;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 import lombok.Getter;
@@ -13,6 +14,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import javax.persistence.*;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.List;
 
 @Getter
 @Setter
@@ -32,6 +34,12 @@ public class User implements UserDetails {
     private String password;
     @Column(name = "email", length = 200, nullable = false)
     private String email;
+    @Column(name = "type", length = 200, nullable = false)
+    private String type;
+
+
+    @OneToMany(mappedBy = "user", fetch = FetchType.EAGER)
+    private List<Busket> buskets;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
