@@ -1,6 +1,6 @@
 package com.example.demo.product;
 
-import com.example.demo.basket.Busket;
+import com.example.demo.basket.Basket;
 import com.example.demo.category.Category;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
@@ -34,7 +34,7 @@ public class Product {
 
 
     @OneToMany(mappedBy = "product", fetch = FetchType.EAGER)
-    private List<Busket> buskets;
+    private List<Basket> baskets;
 
     @Override
     public String toString() {

@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <link href="../static/css/bootstrap.css" th:href="@{/css/bootstrap.css}" rel="stylesheet" />
     <link rel="shortcut icon" href="../images/favicon(1).ico" type="image/x-icon">
-    <title>Информация пользователя</title>
+    <title>Пользователи</title>
 </head>
 <body>
 <ul class="nav nav-tabs">
     <a style="margin-left: 25px" class="navbar-brand" href="#">Строительный магазин</a>
     <li class="nav-item">
-        <a class="nav-link" href="categories">Все категории</a>
+        <a class="nav-link active" href="categories">Все категории</a>
     </li>
     <li class="nav-item">
         <a class="nav-link" href="products">Все товары</a>
@@ -24,7 +24,7 @@
         <a class="nav-link" href="basket">Корзина</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link active" href="#">Информация о пользователе</a>
+        <a class="nav-link" href="myinfo">Информация о пользователе</a>
     </li>
     <li class="nav-item">
         <a class="nav-link" aria-current="page" href="login">Сменить аккаунт</a>
@@ -32,23 +32,21 @@
 </ul>
 
 <div style="margin: 40px 40px 0 40px;">
-    <div style="margin-top: 20px"><h2>Ваше имя:</h2><h4 style="color: #084298" th:text="${user.getName()}"></h4></div>
-    <div style="margin-top: 20px"><h2>Ваша почта:</h2><h4 style="color: #084298" th:text="${user.getEmail()}"></h4></div>
-    <div style="margin-top: 20px"><h2>Ваш тип:</h2><h4 style="color: #084298" th:text="${user.getType()}"></h4></div>
-</div>
-
-<div style="margin: 40px 40px 0 40px;">
-    <h2 style="margin-top: 20px">Сменить почту:</h2>
-    <form name="Сменить почту" method="post" action="/myinfo">
-        <label>
-            <input type="email" name="email"
-                   placeholder="Ваша новая почта"/>
-        </label>
-        <label>
-            <input type="hidden" name="action" value="change_email"/>
-        </label>
-        <button type="submit">Change</button>
-    </form>
+    <h2>Пользователи</h2>
+    <table class="table table-hover">
+        <tr>
+            <th>Имя</th>
+            <th>Почта</th>
+            <th>Права</th>
+        </tr>
+        <th:block th:each="user : ${users}">
+            <tr>
+                <td th:text="${user.getName()}"></td>
+                <td th:text="${user.getEmail()}"></td>
+                <td th:text="${user.getType()}"></td>
+            </tr>
+        </th:block>
+    </table>
 </div>
 <div style="margin-top: 60px">&#160;</div>
 <footer class="footer mt-auto py-3 bg-light" style="position: fixed; z-index: 101; left: 0; bottom: 0; width: 100%; height: 80px;">

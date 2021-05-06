@@ -14,9 +14,9 @@ import javax.persistence.*;
 
 @Entity
 @Data
-@Table(name = "busket")
+@Table(name = "basket")
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
-public class Busket {
+public class Basket {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;

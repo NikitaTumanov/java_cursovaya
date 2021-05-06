@@ -1,6 +1,5 @@
 package com.example.demo.user;
 
-import com.example.demo.product.Product;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -8,8 +7,9 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.List;
-
+@Transactional
 @Service
 @RequiredArgsConstructor
 public class UserService implements UserDetailsService {
@@ -29,6 +29,14 @@ public class UserService implements UserDetailsService {
         u.setEmail(email);
         u.setType(type);
         userRepository.save(u);
+    }
+
+    public void saveChanges(User user) {
+        userRepository.save(user);
+    }
+
+    public void delete(String Name) {
+        userRepository.deleteByName(Name);
     }
 
     public User findByName(String name) {

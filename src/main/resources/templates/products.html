@@ -3,35 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <link href="../static/css/bootstrap.css" th:href="@{/css/bootstrap.css}" rel="stylesheet" />
-    <title>Title</title>
+    <link rel="shortcut icon" href="../images/favicon(1).ico" type="image/x-icon">
+    <title>Товары</title>
+    <style>
+        input,h4,td:first-letter{
+            text-transform: capitalize;
+        }
+    </style>
 </head>
 <body>
 <ul class="nav nav-tabs">
-    <li class="nav-item">
-        <a class="nav-link" aria-current="page" href="login">Сменить аккаунт</a>
-    </li>
+    <a style="margin-left: 25px" class="navbar-brand" href="#">Строительный магазин</a>
     <li class="nav-item">
         <a class="nav-link" href="categories">Все категории</a>
     </li>
     <li class="nav-item">
         <a class="nav-link active" href="#">Все товары</a>
     </li>
+    <div th:if="${type} == 'admin'">
+        <li class="nav-item">
+            <a class="nav-link" href="admin">Окно админа</a>
+        </li>
+    </div>
     <li class="nav-item">
-        <a class="nav-link" href="#">Корзина</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="admin">Окно админа</a>
+        <a class="nav-link" href="basket">Корзина</a>
     </li>
     <li class="nav-item">
         <a class="nav-link" href="myinfo">Информация о пользователе</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" aria-current="page" href="sign">Создать аккаунт</a>
+        <a class="nav-link" aria-current="page" href="login">Сменить аккаунт</a>
     </li>
 </ul>
 
 <div style="margin: 40px 40px 0 40px;">
-    <h1>Товары</h1>
+    <h2>Товары</h2>
     <form name="Найти товар по имени" method="post" action="/products/takebyname">
         <label>
             <input type="text" name="name"
@@ -50,22 +56,37 @@
             <tr>
                 <td th:text="${product.getProductName()}"></td>
                 <td th:text="${product.getProductPrice()}"></td>
-                <td th:text="${product.getProductVolume()}"></td>
+                <div th:if="${product.getProductVolume()} > '0'">
+                    <td th:text="${product.getProductVolume()}"></td>
+                </div>
+                <div th:if="${product.getProductVolume()} <= '0'">
+                    <td>Товара нет в наличии</td>
+                </div>
                 <td>
-                    <form name="Добавить в корзину" method="post" action="/products/takebyname">
+                    <form name="Добавить в корзину" method="post" action="/products">
                         <label>
-                            <input type="number" name="volume" min="1" th:max="${product.getProductVolume()}"/>
+                            <input type="hidden" name="action" value="add_to_basket"/>
                         </label>
-                        <button type="submit">Добавить в корзину</button>
+                        <label>
+                            <input type="hidden" name="productName" th:value="${product.getProductName()}"/>
+                        </label>
+                        <div style="display: inline-block" th:if="${product.getProductVolume()} > '0'">
+                            <label>
+                                <input type="number" name="volume" min="1" th:max="${product.getProductVolume()}"/>
+                            </label>
+                            <button type="submit">Добавить в корзину</button>
+                        </div>
+                        <div th:if="${product.getProductVolume()} <= '0'"></div>
                     </form>
                 </td>
             </tr>
         </th:block>
     </table>
 </div>
-<footer class="footer mt-auto py-3 bg-light" style="position: absolute; left: 0; bottom: 0; width: 100%; height: 80px;">
+<div style="margin-top: 60px">&#160;</div>
+<footer class="footer mt-auto py-3 bg-light" style="position: fixed; z-index: 101; left: 0; bottom: 0; width: 100%; height: 80px;">
     <div class="container">
-        <span class="text-muted">Работу выполнил студент группы ИКБО-01-19: Туманов Н.А.</span>
+        <span class="text-muted">Работу по созданию web-приложения на тему "Строительный магазин" выполнил студент группы ИКБО-01-19 Туманов Н.А.</span>
     </div>
 </footer>
 </body>

@@ -1,6 +1,6 @@
 package com.example.demo.user;
 
-import com.example.demo.basket.Busket;
+import com.example.demo.basket.Basket;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 import lombok.Getter;
@@ -39,7 +39,7 @@ public class User implements UserDetails {
 
 
     @OneToMany(mappedBy = "user", fetch = FetchType.EAGER)
-    private List<Busket> buskets;
+    private List<Basket> baskets;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
@@ -69,5 +69,15 @@ public class User implements UserDetails {
     @Override
     public boolean isEnabled() {
         return true;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", Name='" + name + '\'' +
+                ", password='" + password + '\'' +
+                ", type=" + type + '\'' +
+                '}';
     }
 }

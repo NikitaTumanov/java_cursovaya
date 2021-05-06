@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <link href="../static/css/bootstrap.css" th:href="@{/css/bootstrap.css}" rel="stylesheet" />
-    <title>Главная</title>
+    <link rel="shortcut icon" href="../images/favicon(1).ico" type="image/x-icon">
+    <title>Окно админа</title>
 </head>
 <body>
 <ul class="nav nav-tabs">
-    <li class="nav-item">
-        <a class="nav-link" aria-current="page" href="login">Сменить аккаунт</a>
-    </li>
+    <a style="margin-left: 25px" class="navbar-brand" href="#">Строительный магазин</a>
     <li class="nav-item">
         <a class="nav-link" href="categories">Все категории</a>
     </li>
@@ -17,20 +16,23 @@
         <a class="nav-link" href="products">Все товары</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="#">Корзина</a>
+        <a class="nav-link active" href="#">Окно админа</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link active" href="#">Окно админа</a>
+        <a class="nav-link" href="basket">Корзина</a>
     </li>
     <li class="nav-item">
         <a class="nav-link" href="myinfo">Информация о пользователе</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" aria-current="page" href="sign">Создать аккаунт</a>
+        <a class="nav-link" aria-current="page" href="login">Сменить аккаунт</a>
     </li>
 </ul>
 
 <div style="margin: 40px 40px 0 40px;">
+    <a href="products">Товары</a>
+    <a href="categories">Категории</a>
+    <a href="users">Пользователи</a>
     <h2 style="margin-top: 20px">Добавить категорию:</h2>
     <form name="Добавить категорию" method="post" action="/admin">
         <label>
@@ -87,10 +89,48 @@
         </label>
         <button type="submit">Delete</button>
     </form>
+    <h2 style="margin-top: 20px"><a href="sign">Создать аккаунт</a></h2>
+    <h2 style="margin-top: 20px">Удалить пользователя:</h2>
+    <form name="Удалить пользователя" method="post" action="/admin">
+        <label>
+            <input type="text" name="name"
+                   placeholder="Имя пользователя"/>
+        </label>
+        <label>
+            <input type="hidden" name="action" value="delete_user"/>
+        </label>
+        <button type="submit">Delete</button>
+    </form>
+    <h2 style="margin-top: 20px">Сменить тип пользователя:</h2>
+    <form name="Сменить тип пользователя" method="post" action="/admin">
+        <label>
+            <input type="text" name="name"
+                   placeholder="Имя пользователя"/>
+        </label>
+        <button type="submit">Change</button>
+        <div class="col-sm-10">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="type" id="gridRadios1" value="user" checked>
+                <label class="form-check-label" for="gridRadios1">
+                    User
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="type" id="gridRadios2" value="admin">
+                <label class="form-check-label" for="gridRadios2">
+                    Admin
+                </label>
+            </div>
+        </div>
+        <label>
+            <input type="hidden" name="action" value="change_type"/>
+        </label>
+    </form>
 </div>
-<footer class="footer mt-auto py-3 bg-light" style="position: absolute; left: 0; bottom: 0; width: 100%; height: 80px;">
+<div style="margin-top: 60px">&#160;</div>
+<footer class="footer mt-auto py-3 bg-light" style="position: fixed; z-index: 101; left: 0; bottom: 0; width: 100%; height: 80px;">
     <div class="container">
-        <span class="text-muted">Работу выполнил студент группы ИКБО-01-19: Туманов Н.А.</span>
+        <span class="text-muted">Работу по созданию web-приложения на тему "Строительный магазин" выполнил студент группы ИКБО-01-19 Туманов Н.А.</span>
     </div>
 </footer>
 </body>

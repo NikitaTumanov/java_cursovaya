@@ -2,33 +2,17 @@
 <html lang="ru" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>Авторизация</title>
+    <title>Регистрация</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="../static/css/bootstrap.css" th:href="@{/css/bootstrap.css}" rel="stylesheet" />
+    <link rel="shortcut icon" href="../images/favicon(1).ico" type="image/x-icon">
 </head>
 <body>
 
 <ul class="nav nav-tabs">
+    <a style="margin-left: 25px" class="navbar-brand" href="#">Строительный магазин</a>
     <li class="nav-item">
-        <a class="nav-link" aria-current="page" href="login">Сменить аккаунт</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="categories">Все категории</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="products">Все товары</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="#">Корзина</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="admin">Окно админа</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="myinfo">Информация о пользователе</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="#">Создать аккаунт</a>
+        <a class="nav-link" href="login">Войти в аккаунт</a>
     </li>
 </ul>
 
@@ -48,7 +32,7 @@
             <div class="col-sm-10">
                 <input class="form-control"
                        id="mailInput"
-                       name="email" type="text"
+                       name="email" type="email"
                        required placeholder="tuman0v.nik@yandex.ru">
             </div>
         </div>
@@ -70,23 +54,9 @@
                        required placeholder="qwerty">
             </div>
         </div>
-        <fieldset class="row mb-3">
-            <legend class="col-form-label col-sm-2 pt-0">Права</legend>
-            <div class="col-sm-10">
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="type" id="gridRadios1" value="user" checked>
-                    <label class="form-check-label" for="gridRadios1">
-                        User
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="type" id="gridRadios2" value="admin">
-                    <label class="form-check-label" for="gridRadios2">
-                        Admin
-                    </label>
-                </div>
-            </div>
-        </fieldset>
+        <label>
+            <input type="hidden" name="type" value="user"/>
+        </label>
         <button type="submit" class="btn btn-primary">Sign up</button>
         <div th:if="${Status} == 'user_exists'">
             Пользователь с таким именем уже существует
@@ -96,9 +66,10 @@
         </div>
     </form>
 </div>
-<footer class="footer mt-auto py-3 bg-light" style="position: absolute; left: 0; bottom: 0; width: 100%; height: 80px;">
+<div style="margin-top: 60px">&#160;</div>
+<footer class="footer mt-auto py-3 bg-light" style="position: fixed; z-index: 101; left: 0; bottom: 0; width: 100%; height: 80px;">
     <div class="container">
-        <span class="text-muted">Работу выполнил студент группы ИКБО-01-19: Туманов Н.А.</span>
+        <span class="text-muted">Работу по созданию web-приложения на тему "Строительный магазин" выполнил студент группы ИКБО-01-19 Туманов Н.А.</span>
     </div>
 </footer>
 </body>
