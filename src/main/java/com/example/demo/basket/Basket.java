@@ -19,7 +19,7 @@ import javax.persistence.*;
 public class Basket {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
     @Column(name = "volume", length = 200, nullable = false)
     int volume;
     @JoinColumn(name="product_id")
@@ -31,12 +31,7 @@ public class Basket {
 
     @Override
     public String toString() {
-        return "Busket{" +
-                "id=" + id +
-                ", volume='" + volume + '\'' +
-                ", user_id='" + user + '\'' +
-                ", product_id=" + product + '\'' +
-                '}';
+        return "Товар:" + product + ", Количество:'" + volume + '\'';
     }
 
 }

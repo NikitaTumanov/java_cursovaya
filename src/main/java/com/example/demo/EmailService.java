@@ -15,7 +15,7 @@ import java.util.Properties;
 public class EmailService {
 
     @Async
-    public void sendmail(Object s) throws AddressException, MessagingException, IOException {
+    public void sendmail(String message, String email) throws AddressException, MessagingException, IOException {
         Properties props = new Properties();
         props.put("mail.smtp.auth", "true");
         props.put("mail.smtp.starttls.enable", "true");
@@ -30,12 +30,12 @@ public class EmailService {
         Message msg = new MimeMessage(session);
         msg.setFrom(new InternetAddress("bigredbear37@gmail.com", false));
 
-        msg.setRecipients(Message.RecipientType.TO, InternetAddress.parse("bigredbear37@gmail.com"));
-        msg.setSubject("DemoApplication. Создание объекта");
+        msg.setRecipients(Message.RecipientType.TO, InternetAddress.parse(email));
+        msg.setSubject("Создание заказа");
         msg.setSentDate(new Date());
 
         MimeBodyPart messageBodyPart = new MimeBodyPart();
-        messageBodyPart.setContent("Object " + s.toString() + " was successfully added", "text/html");
+        messageBodyPart.setContent("Ваш заказ {" + message + '}' + " успешно создан", "text/html");
 
         Multipart multipart = new MimeMultipart();
         multipart.addBodyPart(messageBodyPart);

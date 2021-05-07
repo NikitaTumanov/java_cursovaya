@@ -31,7 +31,7 @@ public class BasketService {
         return basketRepository.findAll();
     }
 
-    public Basket findByBusketId(int id) {
+    public Basket findByBusketId(long id) {
         log.info("Find busket, whose id = {}", id);
         return basketRepository.findById(id);
     }
@@ -46,7 +46,7 @@ public class BasketService {
         return basketRepository.deleteByUser(user);
     }
 
-    public void delete(int id) {
+    public void delete(long id) {
         log.info("Delete  busket, whose id = {}", id);
         basketRepository.deleteById(id);
     }

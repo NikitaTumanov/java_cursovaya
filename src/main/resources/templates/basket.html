@@ -5,19 +5,30 @@
     <link href="../static/css/bootstrap.css" th:href="@{/css/bootstrap.css}" rel="stylesheet" />
     <link rel="shortcut icon" href="../images/favicon(1).ico" type="image/x-icon">
     <title>Корзина</title>
+    <style>
+        h4,td:first-letter{
+            text-transform: capitalize;
+        }
+        li{
+            display: inline-block;
+        }
+    </style>
 </head>
 <body>
 <ul class="nav nav-tabs">
     <a style="margin-left: 25px" class="navbar-brand" href="#">Строительный магазин</a>
     <li class="nav-item">
-        <a class="nav-link" href="#">Все категории</a>
+        <a class="nav-link" href="categories">Категории</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="products">Все товары</a>
+        <a class="nav-link" href="products">Товары</a>
     </li>
     <div th:if="${type} == 'admin'">
         <li class="nav-item">
-            <a class="nav-link" href="admin">Окно админа</a>
+            <a class="nav-link" href="users">Пользователи</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="admin" style="color: firebrick">Окно админа</a>
         </li>
     </div>
     <li class="nav-item">
@@ -37,16 +48,41 @@
         <tr>
             <th>Название</th>
             <th>Количество</th>
-            <th>Цена за шт</th>
+            <th>Цена</th>
+            <th></th>
         </tr>
         <th:block th:each="basket : ${baskets}">
             <tr>
                 <td th:text="${basket.getProduct().getProductName()}"></td>
+                <td><p style="display: inline" th:text="${basket.getProduct().getProductPrice()}"></p><p style="display: inline">&#160;рублей</p></td>
                 <td th:text="${basket.getVolume()}"></td>
-                <td th:text="${basket.getProduct().getProductPrice()}"></td>
+                <td>
+                    <form name="Удалить из корзины" method="post" action="/basket">
+                        <label>
+                            <input type="hidden" name="action" value="delete_from_basket"/>
+                        </label>
+                        <label>
+                            <input type="hidden" name="volume" th:value="${basket.getVolume()}"/>
+                        </label>
+                        <label>
+                            <input type="hidden" name="basketId" th:value="${basket.getId()}"/>
+                        </label>
+                            <button type="submit">Удалить из корзины</button>
+                    </form>
+                </td>
             </tr>
         </th:block>
     </table>
+    <div style="display: inline"><b style="display: inline">Общая стоимость:&#160;</b><p style="display: inline" th:text="${sum}"></p><p style="display: inline">&#160;рублей</p>
+    <form name="Сделать заказ" method="post" action="/basket">
+        <label>
+            <input type="hidden" name="action" value="make_order"/>
+        </label>
+        <label>
+            <input type="hidden" name="basketId" th:value="1"/>
+        </label>
+        <button type="submit">Сделать заказ</button>
+    </form>
 </div>
 <div style="margin-top: 60px">&#160;</div>
 <footer class="footer mt-auto py-3 bg-light" style="position: fixed; z-index: 101; left: 0; bottom: 0; width: 100%; height: 80px;">

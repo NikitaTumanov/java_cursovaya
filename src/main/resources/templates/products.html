@@ -9,20 +9,26 @@
         input,h4,td:first-letter{
             text-transform: capitalize;
         }
+        li{
+            display: inline-block;
+        }
     </style>
 </head>
 <body>
 <ul class="nav nav-tabs">
     <a style="margin-left: 25px" class="navbar-brand" href="#">Строительный магазин</a>
     <li class="nav-item">
-        <a class="nav-link" href="categories">Все категории</a>
+        <a class="nav-link" href="categories">Категории</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link active" href="#">Все товары</a>
+        <a class="nav-link active" href="#">Товары</a>
     </li>
     <div th:if="${type} == 'admin'">
         <li class="nav-item">
-            <a class="nav-link" href="admin">Окно админа</a>
+            <a class="nav-link" href="users">Пользователи</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="admin" style="color: firebrick">Окно админа</a>
         </li>
     </div>
     <li class="nav-item">
@@ -55,7 +61,7 @@
         <th:block th:each="product : ${products}">
             <tr>
                 <td th:text="${product.getProductName()}"></td>
-                <td th:text="${product.getProductPrice()}"></td>
+                <td><p style="display: inline" th:text="${product.getProductPrice()}"></p><p style="display: inline">&#160;рублей</p></td>
                 <div th:if="${product.getProductVolume()} > '0'">
                     <td th:text="${product.getProductVolume()}"></td>
                 </div>

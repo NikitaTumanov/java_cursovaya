@@ -1,7 +1,9 @@
 package com.example.demo;
 
+import com.example.demo.basket.Basket;
 import com.example.demo.category.CategoryService;
 import com.example.demo.product.Product;
+import com.example.demo.user.UserService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.hibernate.Session;
@@ -27,6 +29,8 @@ import java.util.List;
 public class CriteriaService {
     @Autowired
     private CategoryService categoryService;
+    @Autowired
+    private UserService userService;
 
     private final SessionFactory sessionFactory;
     private Session session;
@@ -48,6 +52,16 @@ public class CriteriaService {
         Root<Product> root = orderCriteriaQuery.from(Product.class);
         orderCriteriaQuery.select(root).where(builder.equal(root.get("category"), categoryService.findByName(category).getId()));
         Query<Product> query = session.createQuery(orderCriteriaQuery);
+        return query.getResultList();
+    }
+
+    public List<Basket> takeByUser(String name) {
+        log.info("Find baskets, who has this name");
+        CriteriaBuilder builder = session.getCriteriaBuilder();
+        CriteriaQuery<Basket> orderCriteriaQuery = builder.createQuery(Basket.class);
+        Root<Basket> root = orderCriteriaQuery.from(Basket.class);
+        orderCriteriaQuery.select(root).where(builder.equal(root.get("user"), userService.findByName(name)));
+        Query<Basket> query = session.createQuery(orderCriteriaQuery);
         return query.getResultList();
     }
 

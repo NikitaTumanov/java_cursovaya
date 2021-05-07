@@ -5,19 +5,27 @@
     <link href="../static/css/bootstrap.css" th:href="@{/css/bootstrap.css}" rel="stylesheet" />
     <link rel="shortcut icon" href="../images/favicon(1).ico" type="image/x-icon">
     <title>Пользователи</title>
+    <style>
+        li{
+            display: inline-block;
+        }
+    </style>
 </head>
 <body>
 <ul class="nav nav-tabs">
     <a style="margin-left: 25px" class="navbar-brand" href="#">Строительный магазин</a>
     <li class="nav-item">
-        <a class="nav-link active" href="categories">Все категории</a>
+        <a class="nav-link" href="categories">Категории</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="products">Все товары</a>
+        <a class="nav-link" href="products">Товары</a>
     </li>
     <div th:if="${type} == 'admin'">
         <li class="nav-item">
-            <a class="nav-link" href="admin">Окно админа</a>
+            <a class="nav-link active" href="users">Пользователи</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="admin" style="color: firebrick">Окно админа</a>
         </li>
     </div>
     <li class="nav-item">

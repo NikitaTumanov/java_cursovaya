@@ -23,8 +23,8 @@ public class MyController {
     private CategoryService categoryService;
     @Autowired
     private ProductService productService;
-    /*@Autowired
-    private EmailService emailService;*/
+    @Autowired
+    private EmailService emailService;
     @Autowired
     private CriteriaService criteriaService;
     @Autowired
@@ -36,24 +36,27 @@ public class MyController {
     public String myinfo(Authentication authentication,Model model) {
         model.addAttribute("type", userService.findByName(authentication.getName()).getType());
         model.addAttribute("user", userService.findByName(authentication.getName()));
+        model.addAttribute("myName", authentication.getName());
         return "myinfo";
     }
 
     @SneakyThrows
     @PostMapping(path = "/myinfo")
     public String change_myinfo(Authentication authentication, String email, @RequestParam String action, Model model) {
-        model.addAttribute("type", userService.findByName(authentication.getName()).getType());
-        model.addAttribute("user", userService.findByName(authentication.getName()));
         if ("change_email".equals(action)) {
             userService.findByName(authentication.getName()).setEmail(email);
             userService.saveChanges(userService.findByName(authentication.getName()));
         }
+        model.addAttribute("type", userService.findByName(authentication.getName()).getType());
+        model.addAttribute("user", userService.findByName(authentication.getName()));
+        model.addAttribute("myName", authentication.getName());
         return "myinfo";
     }
 
     @RequestMapping(path = "/admin")
     public String admin(Authentication authentication, Model model) {
         model.addAttribute("type", userService.findByName(authentication.getName()).getType());
+        model.addAttribute("myName", authentication.getName());
         if(userService.findByName(authentication.getName()).getType().equals("admin")){
             return "admin";
         }
@@ -67,21 +70,57 @@ public class MyController {
     public String Categoriesinfo(Authentication authentication, Model model) throws IOException, MessagingException {
         model.addAttribute("type", userService.findByName(authentication.getName()).getType());
         model.addAttribute("categories", categoryService.readAll());
+        model.addAttribute("myName", authentication.getName());
         return "categories";
     }
+
     @RequestMapping(path = "/users")
     public String Usersinfo(Authentication authentication, Model model) throws IOException, MessagingException {
         model.addAttribute("type", userService.findByName(authentication.getName()).getType());
         model.addAttribute("users", userService.readAll());
+        model.addAttribute("myName", authentication.getName());
         return "users";
     }
 
     @SneakyThrows
-    @PostMapping(path = "/products")
-    public String addToBasket(Authentication authentication, String productName, int volume, @RequestParam String action, Model model) {
+    @PostMapping(path = "/basket")
+    public String BasketWork(Authentication authentication, long basketId, Integer volume, @RequestParam String action, Model model) {
+        model.addAttribute("productService", productService);
+        model.addAttribute("myName", authentication.getName());
+        if ("delete_from_basket".equals(action)) {
+            productService.findByProductName(basketService.findByBusketId(basketId).getProduct().getProductName())
+                    .setProductVolume(productService.findByProductName(basketService.findByBusketId(basketId)
+                            .getProduct().getProductName()).getProductVolume()+volume);
+            productService.create(productService.findByProductName(basketService.findByBusketId(basketId).getProduct().getProductName()));
+            basketService.findByBusketId(basketId).getProduct().getBaskets().remove(basketService.findByBusketId(basketId));
+            basketService.findByBusketId(basketId).getUser().getBaskets().remove(basketService.findByBusketId(basketId));
+            basketService.delete(basketId);
+        }
+        if ("make_order".equals(action)) {
+            StringBuilder message = new StringBuilder();
+            for(Basket basket:criteriaService.takeByUser(authentication.getName())){
+                message.append(basket.toString());
+                basket.getProduct().getBaskets().remove(basket);
+                basket.getUser().getBaskets().remove(basket);
+                basketService.delete(basket.getId());
+            }
+            emailService.sendmail(message.toString(), userService.findByName(authentication.getName()).getEmail());
+        }
+        int sum=0;
+        for(Basket basket:criteriaService.takeByUser(authentication.getName())){
+            sum+=basket.getVolume()*basket.getProduct().getProductPrice();
+        }
         model.addAttribute("type", userService.findByName(authentication.getName()).getType());
         model.addAttribute("user", userService.findByName(authentication.getName()));
-        model.addAttribute("products", productService.readAll());
+        model.addAttribute("sum", sum);
+        model.addAttribute("baskets", criteriaService.takeByUser(authentication.getName()));
+        return "basket";
+    }
+
+    @SneakyThrows
+    @PostMapping(path = "/products")
+    public String addToBasket(Authentication authentication, String productName, int volume,
+                              @RequestParam String action, Model model) {
         if ("add_to_basket".equals(action)) {
             Basket basket = new Basket();
             basket.setProduct(productService.findByProductName(productName));
@@ -90,38 +129,54 @@ public class MyController {
             userService.findByName(authentication.getName()).getBaskets().add(basket);
             productService.findByProductName(productName).getBaskets().add(basket);
             basketService.create(basket);
-            productService.findByProductName(productName).setProductVolume(productService.findByProductName(productName).getProductVolume()-volume);
+            productService.findByProductName(productName).setProductVolume(productService.findByProductName(productName)
+                    .getProductVolume()-volume);
             productService.create(productService.findByProductName(productName));
         }
+        model.addAttribute("type", userService.findByName(authentication.getName()).getType());
+        model.addAttribute("myName", authentication.getName());
+        model.addAttribute("user", userService.findByName(authentication.getName()));
+        model.addAttribute("products", productService.readAll());
         return "products";
     }
 
     @RequestMapping(path = "/products")
     public String Productsinfo(Authentication authentication, Model model) {
         model.addAttribute("type", userService.findByName(authentication.getName()).getType());
+        model.addAttribute("myName", authentication.getName());
         model.addAttribute("products", productService.readAll());
         return "products";
     }
 
     @RequestMapping(path = "/basket")
     public String Basketinfo(Authentication authentication, Model model) {
+        int sum=0;
+        for(Basket basket:criteriaService.takeByUser(authentication.getName())){
+            sum+=basket.getVolume()*basket.getProduct().getProductPrice();
+        }
         model.addAttribute("type", userService.findByName(authentication.getName()).getType());
-        model.addAttribute("baskets", basketService.findByUser(userService.findByName(authentication.getName())));
+        model.addAttribute("baskets", criteriaService.takeByUser(authentication.getName()));
+        model.addAttribute("myName", authentication.getName());
         model.addAttribute("productService", productService);
+        model.addAttribute("sum", sum);
         return "basket";
     }
 
     @SneakyThrows
     @PostMapping(path = "/admin")
-    public String add_delete(Authentication authentication, String name, Integer volume, Integer price, String category, String type, @RequestParam String action, Model model){
+    public String add_delete(Authentication authentication, String name, Integer volume, Integer price, String category,
+                             String type, @RequestParam String action, Model model){
         model.addAttribute("type", userService.findByName(authentication.getName()).getType());
+        model.addAttribute("myName", authentication.getName());
         switch (action) {
             case "add" -> {
                 Category cat = new Category();
                 cat.setName(name);
                 categoryService.create(cat);
             }
-            case "delete" -> categoryService.delete(name);
+            case "delete" -> {
+                categoryService.delete(name);
+            }
             case "add_product" -> {
                 Product prod = new Product();
                 prod.setProductName(name);
@@ -132,7 +187,8 @@ public class MyController {
                 productService.create(prod);
             }
             case "delete_product" -> {
-                productService.findByProductName(name).getCategory().getProducts().remove(productService.findByProductName(name));
+                productService.findByProductName(name).getCategory().getProducts().remove(productService.
+                        findByProductName(name));
                 productService.delete(name);
             }
             case "change_type" -> {
@@ -144,8 +200,6 @@ public class MyController {
                 userService.delete(name);
             }
         }
-        //emailService.sendmail(category);
-        //model.addAttribute("categories", categoryService.readAll());
        return "admin";
     }
 
@@ -154,6 +208,7 @@ public class MyController {
         model.addAttribute("type", userService.findByName(authentication.getName()).getType());
         model.addAttribute("products", criteriaService.takeByCategory(category));
         model.addAttribute("category", category);
+        model.addAttribute("myName", authentication.getName());
         return "products/takebycategory";
     }
 
@@ -162,6 +217,7 @@ public class MyController {
         model.addAttribute("type", userService.findByName(authentication.getName()).getType());
         model.addAttribute("products", criteriaService.takeByProductName(name));
         model.addAttribute("name", name);
+        model.addAttribute("myName", authentication.getName());
         return "products/takebyname";
     }
 
@@ -174,11 +230,13 @@ public class MyController {
     public String index2(Authentication authentication, Model model) {
         model.addAttribute("type", userService.findByName(authentication.getName()).getType());
         model.addAttribute("products", productService.readAll());
+        model.addAttribute("myName", authentication.getName());
         return "products";
     }
 
     @RequestMapping(path = "/signUperror", method = RequestMethod.POST)
-    public String SignUp(@RequestParam String username, String password, String password2, String email, String type, Model model) {
+    public String SignUp(@RequestParam String username, String password, String password2, String email, String type,
+                         Model model) {
         if (!password.equals(password2)) {
             model.addAttribute("Status", "pass1!=pass2");
             return "signup";
