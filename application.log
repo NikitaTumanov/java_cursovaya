@@ -10578,3 +10578,343 @@ java.lang.NullPointerException: Cannot invoke "com.example.demo.basket.Basket.ge
                 – Find all products
 11677 [http-nio-8080-exec-6] INFO  com.example.demo.Aspect
                 – Method time: 34ms
+1053 [restartedMain] INFO  com.example.demo.DemoApplication
+                – Starting DemoApplication using Java 16.0.1 on LAPTOP-A1OJIE9H with PID 19504 (D:\study\curs3\java_cursovaya\target\classes started by bigre in D:\study\curs3\java_cursovaya)
+1056 [restartedMain] INFO  com.example.demo.DemoApplication
+                – No active profile set, falling back to default profiles: default
+1108 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor
+                – Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+1108 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor
+                – For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+1771 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate
+                – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+1834 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate
+                – Finished Spring Data repository scanning in 55 ms. Found 4 JPA repository interfaces.
+2449 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+                – Tomcat initialized with port(s): 8080 (http)
+2458 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol
+                – Initializing ProtocolHandler ["http-nio-8080"]
+2459 [restartedMain] INFO  o.a.catalina.core.StandardService
+                – Starting service [Tomcat]
+2459 [restartedMain] INFO  o.a.catalina.core.StandardEngine
+                – Starting Servlet engine: [Apache Tomcat/9.0.44]
+2561 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]
+                – Initializing Spring embedded WebApplicationContext
+2561 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext
+                – Root WebApplicationContext: initialization completed in 1452 ms
+2719 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource
+                – HikariPool-1 - Starting...
+2953 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource
+                – HikariPool-1 - Start completed.
+3000 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper
+                – HHH000204: Processing PersistenceUnitInfo [name: default]
+3052 [restartedMain] INFO  org.hibernate.Version
+                – HHH000412: Hibernate ORM core version 5.4.29.Final
+3177 [restartedMain] INFO  o.h.annotations.common.Version
+                – HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+3319 [restartedMain] INFO  org.hibernate.dialect.Dialect
+                – HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+4711 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator
+                – HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+4729 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean
+                – Initialized JPA EntityManagerFactory for persistence unit 'default'
+6071 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration
+                – spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+6463 [restartedMain] INFO  o.s.s.w.DefaultSecurityFilterChain
+                – Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@815a9bd, org.springframework.security.web.context.SecurityContextPersistenceFilter@3cec935a, org.springframework.security.web.header.HeaderWriterFilter@437c802f, org.springframework.security.web.authentication.logout.LogoutFilter@409d6158, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4dbe867, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@484a2a25, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@676796e5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7a210d46, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6d182617, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@395f638d, org.springframework.security.web.session.SessionManagementFilter@31bed480, org.springframework.security.web.access.ExceptionTranslationFilter@1360f8ef, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@15208c41]
+6793 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor
+                – Initializing ExecutorService 'applicationTaskExecutor'
+7386 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskScheduler
+                – Initializing ExecutorService 'taskScheduler'
+7472 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer
+                – LiveReload server is running on port 35729
+7526 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol
+                – Starting ProtocolHandler ["http-nio-8080"]
+7624 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+                – Tomcat started on port(s): 8080 (http) with context path ''
+7654 [restartedMain] INFO  com.example.demo.DemoApplication
+                – Started DemoApplication in 7.091 seconds (JVM running for 8.253)
+9834 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]
+                – Initializing Spring DispatcherServlet 'dispatcherServlet'
+9834 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet
+                – Initializing Servlet 'dispatcherServlet'
+9838 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet
+                – Completed initialization in 4 ms
+10122 [http-nio-8080-exec-2] WARN  o.a.c.util.SessionIdGeneratorBase
+                – Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [135] milliseconds.
+13237 [http-nio-8080-exec-5] INFO  com.example.demo.Aspect
+                – Parameters: UsernamePasswordAuthenticationToken [Principal=User{id=4, Name='Никита', password='$2a$10$1DA6xwtbVkZz6TkPHCfDpero3OPTWNaUSMaI7m4x2W.d/UGocoSTy', type=admin'}, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=5971D42C362C9EF483A775E1663ABEF5], Granted Authorities=[USER]]
+13255 [http-nio-8080-exec-5] INFO  c.e.demo.category.CategoryService
+                – Find all categories
+13317 [http-nio-8080-exec-5] INFO  com.example.demo.Aspect
+                – Method time: 80ms
+16427 [http-nio-8080-exec-9] INFO  com.example.demo.Aspect
+                – Parameters: UsernamePasswordAuthenticationToken [Principal=User{id=4, Name='Никита', password='$2a$10$1DA6xwtbVkZz6TkPHCfDpero3OPTWNaUSMaI7m4x2W.d/UGocoSTy', type=admin'}, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=5971D42C362C9EF483A775E1663ABEF5], Granted Authorities=[USER]]
+16433 [http-nio-8080-exec-9] INFO  com.example.demo.Aspect
+                – Method time: 6ms
+18089 [http-nio-8080-exec-4] INFO  com.example.demo.Aspect
+                – Parameters: UsernamePasswordAuthenticationToken [Principal=User{id=4, Name='Никита', password='$2a$10$1DA6xwtbVkZz6TkPHCfDpero3OPTWNaUSMaI7m4x2W.d/UGocoSTy', type=admin'}, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=5971D42C362C9EF483A775E1663ABEF5], Granted Authorities=[USER]]
+18090 [http-nio-8080-exec-4] INFO  com.example.demo.Aspect
+                – Parameters: Никита
+18092 [http-nio-8080-exec-4] INFO  com.example.demo.CriteriaService
+                – Find baskets, who has this name
+18102 [http-nio-8080-exec-4] INFO  com.example.demo.Aspect
+                – Method time: 12ms
+18105 [http-nio-8080-exec-4] INFO  com.example.demo.Aspect
+                – Parameters: Никита
+18105 [http-nio-8080-exec-4] INFO  com.example.demo.CriteriaService
+                – Find baskets, who has this name
+18107 [http-nio-8080-exec-4] INFO  com.example.demo.Aspect
+                – Method time: 2ms
+18108 [http-nio-8080-exec-4] INFO  com.example.demo.Aspect
+                – Method time: 19ms
+20595 [http-nio-8080-exec-7] INFO  com.example.demo.Aspect
+                – Parameters: UsernamePasswordAuthenticationToken [Principal=User{id=4, Name='Никита', password='$2a$10$1DA6xwtbVkZz6TkPHCfDpero3OPTWNaUSMaI7m4x2W.d/UGocoSTy', type=admin'}, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=5971D42C362C9EF483A775E1663ABEF5], Granted Authorities=[USER]]
+20604 [http-nio-8080-exec-7] INFO  c.e.demo.product.ProductService
+                – Find all products
+20622 [http-nio-8080-exec-7] INFO  com.example.demo.Aspect
+                – Method time: 27ms
+22681 [http-nio-8080-exec-3] INFO  com.example.demo.Aspect
+                – Parameters: UsernamePasswordAuthenticationToken [Principal=User{id=4, Name='Никита', password='$2a$10$1DA6xwtbVkZz6TkPHCfDpero3OPTWNaUSMaI7m4x2W.d/UGocoSTy', type=admin'}, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=5971D42C362C9EF483A775E1663ABEF5], Granted Authorities=[USER]]
+22682 [http-nio-8080-exec-3] INFO  c.e.demo.product.ProductService
+                – Find product, whose productName = дрель
+22694 [http-nio-8080-exec-3] INFO  c.e.demo.product.ProductService
+                – Find product, whose productName = дрель
+22703 [http-nio-8080-exec-3] INFO  c.example.demo.basket.BasketService
+                – Save busket Товар:дрель, Количество:'2'
+22724 [http-nio-8080-exec-3] INFO  c.e.demo.product.ProductService
+                – Find product, whose productName = дрель
+22726 [http-nio-8080-exec-3] INFO  c.e.demo.product.ProductService
+                – Find product, whose productName = дрель
+22729 [http-nio-8080-exec-3] INFO  c.e.demo.product.ProductService
+                – Find product, whose productName = дрель
+22737 [http-nio-8080-exec-3] INFO  c.e.demo.product.ProductService
+                – Save product дрель
+22747 [http-nio-8080-exec-3] INFO  c.e.demo.product.ProductService
+                – Find all products
+22756 [http-nio-8080-exec-3] INFO  com.example.demo.Aspect
+                – Method time: 75ms
+24050 [http-nio-8080-exec-5] INFO  com.example.demo.Aspect
+                – Parameters: UsernamePasswordAuthenticationToken [Principal=User{id=4, Name='Никита', password='$2a$10$1DA6xwtbVkZz6TkPHCfDpero3OPTWNaUSMaI7m4x2W.d/UGocoSTy', type=admin'}, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=5971D42C362C9EF483A775E1663ABEF5], Granted Authorities=[USER]]
+24051 [http-nio-8080-exec-5] INFO  com.example.demo.Aspect
+                – Parameters: Никита
+24051 [http-nio-8080-exec-5] INFO  com.example.demo.CriteriaService
+                – Find baskets, who has this name
+24075 [http-nio-8080-exec-5] INFO  com.example.demo.Aspect
+                – Method time: 24ms
+24078 [http-nio-8080-exec-5] INFO  com.example.demo.Aspect
+                – Parameters: Никита
+24078 [http-nio-8080-exec-5] INFO  com.example.demo.CriteriaService
+                – Find baskets, who has this name
+24081 [http-nio-8080-exec-5] INFO  com.example.demo.Aspect
+                – Method time: 3ms
+24082 [http-nio-8080-exec-5] INFO  com.example.demo.Aspect
+                – Method time: 32ms
+27062 [http-nio-8080-exec-9] INFO  com.example.demo.Aspect
+                – Parameters: UsernamePasswordAuthenticationToken [Principal=User{id=4, Name='Никита', password='$2a$10$1DA6xwtbVkZz6TkPHCfDpero3OPTWNaUSMaI7m4x2W.d/UGocoSTy', type=admin'}, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=5971D42C362C9EF483A775E1663ABEF5], Granted Authorities=[USER]]
+27073 [http-nio-8080-exec-9] INFO  com.example.demo.Aspect
+                – Method time: 11ms
+903  [restartedMain] INFO  com.example.demo.DemoApplication
+                – Starting DemoApplication using Java 16.0.1 on LAPTOP-A1OJIE9H with PID 5936 (D:\study\curs3\java_cursovaya\target\classes started by bigre in D:\study\curs3\java_cursovaya)
+906  [restartedMain] INFO  com.example.demo.DemoApplication
+                – No active profile set, falling back to default profiles: default
+970  [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor
+                – Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+970  [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor
+                – For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+1761 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate
+                – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+1840 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate
+                – Finished Spring Data repository scanning in 67 ms. Found 4 JPA repository interfaces.
+2487 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+                – Tomcat initialized with port(s): 8080 (http)
+2495 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol
+                – Initializing ProtocolHandler ["http-nio-8080"]
+2495 [restartedMain] INFO  o.a.catalina.core.StandardService
+                – Starting service [Tomcat]
+2496 [restartedMain] INFO  o.a.catalina.core.StandardEngine
+                – Starting Servlet engine: [Apache Tomcat/9.0.44]
+2581 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]
+                – Initializing Spring embedded WebApplicationContext
+2581 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext
+                – Root WebApplicationContext: initialization completed in 1609 ms
+2769 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource
+                – HikariPool-1 - Starting...
+2995 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource
+                – HikariPool-1 - Start completed.
+3038 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper
+                – HHH000204: Processing PersistenceUnitInfo [name: default]
+3081 [restartedMain] INFO  org.hibernate.Version
+                – HHH000412: Hibernate ORM core version 5.4.29.Final
+3195 [restartedMain] INFO  o.h.annotations.common.Version
+                – HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+3302 [restartedMain] INFO  org.hibernate.dialect.Dialect
+                – HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+3969 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator
+                – HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+3980 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean
+                – Initialized JPA EntityManagerFactory for persistence unit 'default'
+4538 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration
+                – spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+4687 [restartedMain] INFO  o.s.s.w.DefaultSecurityFilterChain
+                – Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@83e61a9, org.springframework.security.web.context.SecurityContextPersistenceFilter@37482788, org.springframework.security.web.header.HeaderWriterFilter@1c976640, org.springframework.security.web.authentication.logout.LogoutFilter@35fc0157, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7404766f, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@2f935b99, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@68956a76, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@37f15c26, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@417f366, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1abf60f9, org.springframework.security.web.session.SessionManagementFilter@553335ee, org.springframework.security.web.access.ExceptionTranslationFilter@1f7c7068, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7ac9ebc5]
+4802 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor
+                – Initializing ExecutorService 'applicationTaskExecutor'
+5002 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskScheduler
+                – Initializing ExecutorService 'taskScheduler'
+5032 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer
+                – LiveReload server is running on port 35729
+5051 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol
+                – Starting ProtocolHandler ["http-nio-8080"]
+5075 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+                – Tomcat started on port(s): 8080 (http) with context path ''
+5090 [restartedMain] INFO  com.example.demo.DemoApplication
+                – Started DemoApplication in 4.597 seconds (JVM running for 5.943)
+5305 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]
+                – Initializing Spring DispatcherServlet 'dispatcherServlet'
+5305 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet
+                – Initializing Servlet 'dispatcherServlet'
+5306 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet
+                – Completed initialization in 1 ms
+6645 [http-nio-8080-exec-4] INFO  com.example.demo.Aspect
+                – Parameters: UsernamePasswordAuthenticationToken [Principal=User{id=4, Name='Никита', password='$2a$10$1DA6xwtbVkZz6TkPHCfDpero3OPTWNaUSMaI7m4x2W.d/UGocoSTy', type=admin'}, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=F150C7BC7D44B979793864BC7A899CB4], Granted Authorities=[USER]]
+6663 [http-nio-8080-exec-4] INFO  c.e.demo.category.CategoryService
+                – Find all categories
+6691 [http-nio-8080-exec-4] INFO  com.example.demo.Aspect
+                – Method time: 45ms
+8044 [http-nio-8080-exec-6] INFO  com.example.demo.Aspect
+                – Parameters: UsernamePasswordAuthenticationToken [Principal=User{id=4, Name='Никита', password='$2a$10$1DA6xwtbVkZz6TkPHCfDpero3OPTWNaUSMaI7m4x2W.d/UGocoSTy', type=admin'}, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=F150C7BC7D44B979793864BC7A899CB4], Granted Authorities=[USER]]
+8062 [http-nio-8080-exec-6] INFO  c.e.demo.product.ProductService
+                – Find all products
+8075 [http-nio-8080-exec-6] INFO  com.example.demo.Aspect
+                – Method time: 31ms
+9633 [http-nio-8080-exec-8] INFO  com.example.demo.Aspect
+                – Parameters: UsernamePasswordAuthenticationToken [Principal=User{id=4, Name='Никита', password='$2a$10$1DA6xwtbVkZz6TkPHCfDpero3OPTWNaUSMaI7m4x2W.d/UGocoSTy', type=admin'}, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=F150C7BC7D44B979793864BC7A899CB4], Granted Authorities=[USER]]
+9648 [http-nio-8080-exec-8] INFO  com.example.demo.Aspect
+                – Method time: 15ms
+10868 [http-nio-8080-exec-10] INFO  com.example.demo.Aspect
+                – Parameters: UsernamePasswordAuthenticationToken [Principal=User{id=4, Name='Никита', password='$2a$10$1DA6xwtbVkZz6TkPHCfDpero3OPTWNaUSMaI7m4x2W.d/UGocoSTy', type=admin'}, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=F150C7BC7D44B979793864BC7A899CB4], Granted Authorities=[USER]]
+10879 [http-nio-8080-exec-10] INFO  com.example.demo.Aspect
+                – Method time: 11ms
+13347 [http-nio-8080-exec-2] INFO  com.example.demo.Aspect
+                – Parameters: UsernamePasswordAuthenticationToken [Principal=User{id=4, Name='Никита', password='$2a$10$1DA6xwtbVkZz6TkPHCfDpero3OPTWNaUSMaI7m4x2W.d/UGocoSTy', type=admin'}, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=F150C7BC7D44B979793864BC7A899CB4], Granted Authorities=[USER]]
+13348 [http-nio-8080-exec-2] INFO  com.example.demo.Aspect
+                – Parameters: Никита
+13351 [http-nio-8080-exec-2] INFO  com.example.demo.CriteriaService
+                – Find baskets, who has this name
+13379 [http-nio-8080-exec-2] INFO  com.example.demo.Aspect
+                – Method time: 31ms
+13382 [http-nio-8080-exec-2] INFO  com.example.demo.Aspect
+                – Parameters: Никита
+13382 [http-nio-8080-exec-2] INFO  com.example.demo.CriteriaService
+                – Find baskets, who has this name
+13384 [http-nio-8080-exec-2] INFO  com.example.demo.Aspect
+                – Method time: 2ms
+13385 [http-nio-8080-exec-2] INFO  com.example.demo.Aspect
+                – Method time: 38ms
+15670 [http-nio-8080-exec-4] INFO  com.example.demo.Aspect
+                – Parameters: UsernamePasswordAuthenticationToken [Principal=User{id=4, Name='Никита', password='$2a$10$1DA6xwtbVkZz6TkPHCfDpero3OPTWNaUSMaI7m4x2W.d/UGocoSTy', type=admin'}, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=F150C7BC7D44B979793864BC7A899CB4], Granted Authorities=[USER]]
+15682 [http-nio-8080-exec-4] INFO  com.example.demo.Aspect
+                – Method time: 12ms
+36085 [http-nio-8080-exec-6] INFO  com.example.demo.Aspect
+                – Parameters: UsernamePasswordAuthenticationToken [Principal=User{id=4, Name='Никита', password='$2a$10$1DA6xwtbVkZz6TkPHCfDpero3OPTWNaUSMaI7m4x2W.d/UGocoSTy', type=admin'}, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=F150C7BC7D44B979793864BC7A899CB4], Granted Authorities=[USER]]
+36086 [http-nio-8080-exec-6] INFO  com.example.demo.Aspect
+                – Parameters: Никита
+36086 [http-nio-8080-exec-6] INFO  com.example.demo.CriteriaService
+                – Find baskets, who has this name
+36095 [http-nio-8080-exec-6] INFO  com.example.demo.Aspect
+                – Method time: 9ms
+36098 [http-nio-8080-exec-6] INFO  com.example.demo.Aspect
+                – Parameters: Никита
+36098 [http-nio-8080-exec-6] INFO  com.example.demo.CriteriaService
+                – Find baskets, who has this name
+36101 [http-nio-8080-exec-6] INFO  com.example.demo.Aspect
+                – Method time: 3ms
+36102 [http-nio-8080-exec-6] INFO  com.example.demo.Aspect
+                – Method time: 17ms
+37907 [http-nio-8080-exec-8] INFO  com.example.demo.Aspect
+                – Parameters: UsernamePasswordAuthenticationToken [Principal=User{id=4, Name='Никита', password='$2a$10$1DA6xwtbVkZz6TkPHCfDpero3OPTWNaUSMaI7m4x2W.d/UGocoSTy', type=admin'}, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=F150C7BC7D44B979793864BC7A899CB4], Granted Authorities=[USER]]
+37919 [http-nio-8080-exec-8] INFO  com.example.demo.Aspect
+                – Method time: 12ms
+40639 [http-nio-8080-exec-10] INFO  com.example.demo.Aspect
+                – Parameters: UsernamePasswordAuthenticationToken [Principal=User{id=4, Name='Никита', password='$2a$10$1DA6xwtbVkZz6TkPHCfDpero3OPTWNaUSMaI7m4x2W.d/UGocoSTy', type=admin'}, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=F150C7BC7D44B979793864BC7A899CB4], Granted Authorities=[USER]]
+40651 [http-nio-8080-exec-10] INFO  com.example.demo.Aspect
+                – Method time: 11ms
+713  [restartedMain] INFO  com.example.demo.DemoApplication
+                – Starting DemoApplication using Java 16.0.1 on LAPTOP-A1OJIE9H with PID 17208 (D:\study\curs3\java_cursovaya\target\classes started by bigre in D:\study\curs3\java_cursovaya)
+715  [restartedMain] INFO  com.example.demo.DemoApplication
+                – No active profile set, falling back to default profiles: default
+785  [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor
+                – Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+785  [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor
+                – For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+1455 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate
+                – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+1519 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate
+                – Finished Spring Data repository scanning in 55 ms. Found 4 JPA repository interfaces.
+2199 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+                – Tomcat initialized with port(s): 8080 (http)
+2209 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol
+                – Initializing ProtocolHandler ["http-nio-8080"]
+2210 [restartedMain] INFO  o.a.catalina.core.StandardService
+                – Starting service [Tomcat]
+2210 [restartedMain] INFO  o.a.catalina.core.StandardEngine
+                – Starting Servlet engine: [Apache Tomcat/9.0.44]
+2303 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]
+                – Initializing Spring embedded WebApplicationContext
+2304 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext
+                – Root WebApplicationContext: initialization completed in 1516 ms
+2461 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource
+                – HikariPool-1 - Starting...
+2678 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource
+                – HikariPool-1 - Start completed.
+2726 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper
+                – HHH000204: Processing PersistenceUnitInfo [name: default]
+2775 [restartedMain] INFO  org.hibernate.Version
+                – HHH000412: Hibernate ORM core version 5.4.29.Final
+2909 [restartedMain] INFO  o.h.annotations.common.Version
+                – HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+3021 [restartedMain] INFO  org.hibernate.dialect.Dialect
+                – HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+3637 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator
+                – HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+3646 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean
+                – Initialized JPA EntityManagerFactory for persistence unit 'default'
+4172 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration
+                – spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+4318 [restartedMain] INFO  o.s.s.w.DefaultSecurityFilterChain
+                – Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@48efcee1, org.springframework.security.web.context.SecurityContextPersistenceFilter@1f0a5d1a, org.springframework.security.web.header.HeaderWriterFilter@799b07d1, org.springframework.security.web.authentication.logout.LogoutFilter@577f0c5b, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@57d49ccf, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@7245e658, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@427ed295, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@400cd283, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@48a601c5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@32993e70, org.springframework.security.web.session.SessionManagementFilter@41d7f26e, org.springframework.security.web.access.ExceptionTranslationFilter@6789e7f3, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6e7981c]
+4442 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor
+                – Initializing ExecutorService 'applicationTaskExecutor'
+4639 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskScheduler
+                – Initializing ExecutorService 'taskScheduler'
+4668 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer
+                – LiveReload server is running on port 35729
+4686 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol
+                – Starting ProtocolHandler ["http-nio-8080"]
+4718 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+                – Tomcat started on port(s): 8080 (http) with context path ''
+4732 [restartedMain] INFO  com.example.demo.DemoApplication
+                – Started DemoApplication in 4.358 seconds (JVM running for 5.575)
+4877 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]
+                – Initializing Spring DispatcherServlet 'dispatcherServlet'
+4877 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet
+                – Initializing Servlet 'dispatcherServlet'
+4878 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet
+                – Completed initialization in 1 ms
+7048 [http-nio-8080-exec-4] INFO  com.example.demo.Aspect
+                – Parameters: UsernamePasswordAuthenticationToken [Principal=User{id=4, Name='Никита', password='$2a$10$1DA6xwtbVkZz6TkPHCfDpero3OPTWNaUSMaI7m4x2W.d/UGocoSTy', type=admin'}, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=D05D5C0CD266EAFA4931473D9B4EDE01], Granted Authorities=[USER]]
+7066 [http-nio-8080-exec-4] INFO  com.example.demo.Aspect
+                – Method time: 18ms
+13110 [http-nio-8080-exec-6] INFO  com.example.demo.Aspect
+                – Parameters: UsernamePasswordAuthenticationToken [Principal=User{id=4, Name='Никита', password='$2a$10$1DA6xwtbVkZz6TkPHCfDpero3OPTWNaUSMaI7m4x2W.d/UGocoSTy', type=admin'}, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=D05D5C0CD266EAFA4931473D9B4EDE01], Granted Authorities=[USER]]
+13122 [http-nio-8080-exec-6] INFO  c.e.demo.category.CategoryService
+                – Find all categories
+13147 [http-nio-8080-exec-6] INFO  com.example.demo.Aspect
+                – Method time: 37ms
+15919 [http-nio-8080-exec-10] INFO  com.example.demo.Aspect
+                – Parameters: UsernamePasswordAuthenticationToken [Principal=User{id=4, Name='Никита', password='$2a$10$1DA6xwtbVkZz6TkPHCfDpero3OPTWNaUSMaI7m4x2W.d/UGocoSTy', type=admin'}, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=19A63D2FAE0858E347C53230D1B926A2], Granted Authorities=[USER]]
+15930 [http-nio-8080-exec-10] INFO  c.e.demo.product.ProductService
+                – Find all products
+15942 [http-nio-8080-exec-10] INFO  com.example.demo.Aspect
+                – Method time: 23ms

@@ -49,7 +49,7 @@
             <input type="text" name="name"
                    placeholder="Название товара"/>
         </label>
-        <button type="submit">Поиск</button>
+        <button class="btn btn-info" type="submit">Поиск</button>
     </form>
     <table class="table table-hover">
         <tr>
@@ -80,7 +80,7 @@
                             <label>
                                 <input type="number" name="volume" min="1" th:max="${product.getProductVolume()}"/>
                             </label>
-                            <button type="submit">Добавить в корзину</button>
+                            <button class="btn btn-success" type="submit">Добавить в корзину</button>
                         </div>
                         <div th:if="${product.getProductVolume()} <= '0'"></div>
                     </form>
