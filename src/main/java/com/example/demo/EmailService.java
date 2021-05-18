@@ -13,7 +13,6 @@ import java.util.Properties;
 @Service
 @Transactional
 public class EmailService {
-
     @Async
     public void sendmail(String message, String email) throws AddressException, MessagingException, IOException {
         Properties props = new Properties();
@@ -21,10 +20,9 @@ public class EmailService {
         props.put("mail.smtp.starttls.enable", "true");
         props.put("mail.smtp.host", "smtp.gmail.com");
         props.put("mail.smtp.port", "587");
-
         Session session = Session.getInstance(props, new javax.mail.Authenticator() {
             protected PasswordAuthentication getPasswordAuthentication() {
-                return new PasswordAuthentication("bigredbear37@gmail.com", "password");
+                return new PasswordAuthentication("bigredbear37@gmail.com", "mxtpxqwudijmrcjr");
             }
         });
         Message msg = new MimeMessage(session);
@@ -35,7 +33,7 @@ public class EmailService {
         msg.setSentDate(new Date());
 
         MimeBodyPart messageBodyPart = new MimeBodyPart();
-        messageBodyPart.setContent("Ваш заказ {" + message + '}' + " успешно создан", "text/html");
+        messageBodyPart.setContent("Ваш заказ {" + message + '}' + " успешно создан", "text/html; charset=UTF-8");
 
         Multipart multipart = new MimeMultipart();
         multipart.addBodyPart(messageBodyPart);
