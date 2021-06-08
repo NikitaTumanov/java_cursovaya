@@ -1,238 +1,668 @@
-1608 [restartedMain] INFO  com.example.demo.DemoApplication
-                – Starting DemoApplication using Java 16.0.1 on LAPTOP-A1OJIE9H with PID 16876 (D:\study\curs3\java_cursovaya\target\classes started by bigre in D:\study\curs3\java_cursovaya)
-1630 [restartedMain] INFO  com.example.demo.DemoApplication
+836  [restartedMain] INFO  com.example.demo.DemoApplication
+                – Starting DemoApplication using Java 16.0.1 on LAPTOP-A1OJIE9H with PID 6136 (D:\study\curs3\java_cursovaya\target\classes started by bigre in D:\study\curs3\java_cursovaya)
+843  [restartedMain] INFO  com.example.demo.DemoApplication
                 – No active profile set, falling back to default profiles: default
-1732 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor
+897  [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor
                 – Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-1732 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor
+897  [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor
                 – For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-3217 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate
+1893 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate
                 – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-3416 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate
-                – Finished Spring Data repository scanning in 175 ms. Found 4 JPA repository interfaces.
-5497 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+1959 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate
+                – Finished Spring Data repository scanning in 57 ms. Found 4 JPA repository interfaces.
+2656 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer
                 – Tomcat initialized with port(s): 8080 (http)
-5515 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol
+2664 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol
                 – Initializing ProtocolHandler ["http-nio-8080"]
-5516 [restartedMain] INFO  o.a.catalina.core.StandardService
+2665 [restartedMain] INFO  o.a.catalina.core.StandardService
                 – Starting service [Tomcat]
-5517 [restartedMain] INFO  o.a.catalina.core.StandardEngine
+2665 [restartedMain] INFO  o.a.catalina.core.StandardEngine
                 – Starting Servlet engine: [Apache Tomcat/9.0.44]
-5773 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]
+2761 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]
                 – Initializing Spring embedded WebApplicationContext
-5774 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext
-                – Root WebApplicationContext: initialization completed in 4039 ms
-6124 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource
+2761 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext
+                – Root WebApplicationContext: initialization completed in 1863 ms
+2969 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource
                 – HikariPool-1 - Starting...
-6743 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource
+3557 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource
                 – HikariPool-1 - Start completed.
-6828 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper
+3606 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper
                 – HHH000204: Processing PersistenceUnitInfo [name: default]
-6935 [restartedMain] INFO  org.hibernate.Version
+3670 [restartedMain] INFO  org.hibernate.Version
                 – HHH000412: Hibernate ORM core version 5.4.29.Final
-7336 [restartedMain] INFO  o.h.annotations.common.Version
+3822 [restartedMain] INFO  o.h.annotations.common.Version
                 – HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-7756 [restartedMain] INFO  org.hibernate.dialect.Dialect
+3951 [restartedMain] INFO  org.hibernate.dialect.Dialect
                 – HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
-10196 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator
+4981 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator
                 – HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-10260 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean
+4990 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean
                 – Initialized JPA EntityManagerFactory for persistence unit 'default'
-12064 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration
+5468 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration
                 – spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-12556 [restartedMain] INFO  o.s.s.w.DefaultSecurityFilterChain
-                – Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@41aef1ba, org.springframework.security.web.context.SecurityContextPersistenceFilter@65e2266b, org.springframework.security.web.header.HeaderWriterFilter@266ee786, org.springframework.security.web.authentication.logout.LogoutFilter@22e6bb87, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@17d06d54, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@7c3ca7a5, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@275017e0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@50648c45, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3047a4df, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@29451024, org.springframework.security.web.session.SessionManagementFilter@484a2a25, org.springframework.security.web.access.ExceptionTranslationFilter@6befa1c7, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@61c1bddb]
-12983 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor
+5627 [restartedMain] INFO  o.s.s.w.DefaultSecurityFilterChain
+                – Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@b3831, org.springframework.security.web.context.SecurityContextPersistenceFilter@1ed40253, org.springframework.security.web.header.HeaderWriterFilter@2292fb5d, org.springframework.security.web.authentication.logout.LogoutFilter@5a8867f3, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@571a919d, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@42faa5b9, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@1ed210f8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3b3e51ec, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@47fa7b44, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2eb5b89f, org.springframework.security.web.session.SessionManagementFilter@1817485f, org.springframework.security.web.access.ExceptionTranslationFilter@5a818baa, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@75c2dc8c]
+5742 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor
                 – Initializing ExecutorService 'applicationTaskExecutor'
-13388 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskScheduler
+5934 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskScheduler
                 – Initializing ExecutorService 'taskScheduler'
-13434 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer
+6002 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer
                 – LiveReload server is running on port 35729
-13465 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol
+6022 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol
                 – Starting ProtocolHandler ["http-nio-8080"]
-13502 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+6047 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer
                 – Tomcat started on port(s): 8080 (http) with context path ''
-13523 [restartedMain] INFO  com.example.demo.DemoApplication
-                – Started DemoApplication in 12.792 seconds (JVM running for 14.451)
-14875 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]
+6061 [restartedMain] INFO  com.example.demo.DemoApplication
+                – Started DemoApplication in 5.583 seconds (JVM running for 6.791)
+28864 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]
                 – Initializing Spring DispatcherServlet 'dispatcherServlet'
-14876 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet
+28865 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet
                 – Initializing Servlet 'dispatcherServlet'
-14878 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet
-                – Completed initialization in 2 ms
-16883 [http-nio-8080-exec-4] INFO  com.example.demo.Aspect
-                – Parameters: UsernamePasswordAuthenticationToken [Principal=User{id=4, Name='Никита', password='$2a$10$1DA6xwtbVkZz6TkPHCfDpero3OPTWNaUSMaI7m4x2W.d/UGocoSTy', type=admin'}, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=66F954F69E9CB54DC47E864CC7567C49], Granted Authorities=[USER]]
-16899 [http-nio-8080-exec-4] INFO  c.e.demo.category.CategoryService
+28866 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet
+                – Completed initialization in 1 ms
+51601 [http-nio-8080-exec-6] INFO  com.example.demo.Aspect
+                – Parameters: UsernamePasswordAuthenticationToken [Principal=User{id=7, Name='new_user', password='$2a$10$7NIACv7rxcHc17MMbC4XTOmhG8q8bmxX3VDtSsNH.JEmCI5XbAPHm', type=admin'}, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=AD42F72D2A1997D016A19B94356AB8B0], Granted Authorities=[USER]]
+51613 [http-nio-8080-exec-6] INFO  c.e.demo.product.ProductService
+                – Find all products
+51645 [http-nio-8080-exec-6] INFO  com.example.demo.Aspect
+                – Method time: 44ms
+139691 [http-nio-8080-exec-2] INFO  com.example.demo.Aspect
+                – Parameters: {}
+139692 [http-nio-8080-exec-2] INFO  com.example.demo.Aspect
+                – Method time: 1ms
+233729 [http-nio-8080-exec-7] INFO  com.example.demo.Aspect
+                – Parameters: UsernamePasswordAuthenticationToken [Principal=User{id=7, Name='new_user', password='$2a$10$7NIACv7rxcHc17MMbC4XTOmhG8q8bmxX3VDtSsNH.JEmCI5XbAPHm', type=admin'}, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=7C83FDE6F39EE0951097D41A63306CC8], Granted Authorities=[USER]]
+233732 [http-nio-8080-exec-7] INFO  c.e.demo.product.ProductService
+                – Find all products
+233745 [http-nio-8080-exec-7] INFO  com.example.demo.Aspect
+                – Method time: 16ms
+238463 [http-nio-8080-exec-9] INFO  com.example.demo.Aspect
+                – Parameters: UsernamePasswordAuthenticationToken [Principal=User{id=7, Name='new_user', password='$2a$10$7NIACv7rxcHc17MMbC4XTOmhG8q8bmxX3VDtSsNH.JEmCI5XbAPHm', type=admin'}, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=7C83FDE6F39EE0951097D41A63306CC8], Granted Authorities=[USER]]
+238470 [http-nio-8080-exec-9] INFO  c.e.demo.category.CategoryService
                 – Find all categories
-16964 [http-nio-8080-exec-4] INFO  com.example.demo.Aspect
-                – Method time: 80ms
-28194 [http-nio-8080-exec-5] INFO  com.example.demo.Aspect
-                – Parameters: UsernamePasswordAuthenticationToken [Principal=User{id=4, Name='Никита', password='$2a$10$1DA6xwtbVkZz6TkPHCfDpero3OPTWNaUSMaI7m4x2W.d/UGocoSTy', type=admin'}, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=66F954F69E9CB54DC47E864CC7567C49], Granted Authorities=[USER]]
-28199 [http-nio-8080-exec-5] INFO  com.example.demo.Aspect
-                – Parameters: Инструменты
-28203 [http-nio-8080-exec-5] INFO  com.example.demo.CriteriaService
+238496 [http-nio-8080-exec-9] INFO  com.example.demo.Aspect
+                – Method time: 33ms
+465880 [http-nio-8080-exec-2] INFO  com.example.demo.Aspect
+                – Parameters: UsernamePasswordAuthenticationToken [Principal=User{id=7, Name='new_user', password='$2a$10$7NIACv7rxcHc17MMbC4XTOmhG8q8bmxX3VDtSsNH.JEmCI5XbAPHm', type=admin'}, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=7C83FDE6F39EE0951097D41A63306CC8], Granted Authorities=[USER]]
+465885 [http-nio-8080-exec-2] INFO  com.example.demo.Aspect
+                – Parameters: Строительные материалы
+465887 [http-nio-8080-exec-2] INFO  com.example.demo.CriteriaService
                 – Find products, who has this category
-28204 [http-nio-8080-exec-5] INFO  c.e.demo.category.CategoryService
-                – Find category, whose Name = Инструменты
-28242 [http-nio-8080-exec-5] INFO  com.example.demo.Aspect
-                – Method time: 43ms
-28244 [http-nio-8080-exec-5] INFO  com.example.demo.Aspect
-                – Method time: 50ms
-36996 [http-nio-8080-exec-8] INFO  com.example.demo.Aspect
-                – Parameters: UsernamePasswordAuthenticationToken [Principal=User{id=4, Name='Никита', password='$2a$10$1DA6xwtbVkZz6TkPHCfDpero3OPTWNaUSMaI7m4x2W.d/UGocoSTy', type=admin'}, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=66F954F69E9CB54DC47E864CC7567C49], Granted Authorities=[USER]]
-37000 [http-nio-8080-exec-8] INFO  c.e.demo.product.ProductService
-                – Find product, whose productName = дрель
-37017 [http-nio-8080-exec-8] INFO  c.e.demo.product.ProductService
-                – Find product, whose productName = дрель
-37026 [http-nio-8080-exec-8] INFO  c.example.demo.basket.BasketService
-                – Save busket Товар:дрель, Количество:'4'
-37051 [http-nio-8080-exec-8] INFO  c.e.demo.product.ProductService
-                – Find product, whose productName = дрель
-37054 [http-nio-8080-exec-8] INFO  c.e.demo.product.ProductService
-                – Find product, whose productName = дрель
-37058 [http-nio-8080-exec-8] INFO  c.e.demo.product.ProductService
-                – Find product, whose productName = дрель
-37066 [http-nio-8080-exec-8] INFO  c.e.demo.product.ProductService
-                – Save product дрель
-37082 [http-nio-8080-exec-8] INFO  c.e.demo.product.ProductService
-                – Find all products
-37097 [http-nio-8080-exec-8] INFO  com.example.demo.Aspect
-                – Method time: 101ms
-45772 [http-nio-8080-exec-10] INFO  com.example.demo.Aspect
-                – Parameters: UsernamePasswordAuthenticationToken [Principal=User{id=4, Name='Никита', password='$2a$10$1DA6xwtbVkZz6TkPHCfDpero3OPTWNaUSMaI7m4x2W.d/UGocoSTy', type=admin'}, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=66F954F69E9CB54DC47E864CC7567C49], Granted Authorities=[USER]]
-45787 [http-nio-8080-exec-10] INFO  com.example.demo.Aspect
-                – Parameters: кирпичи
-45787 [http-nio-8080-exec-10] INFO  com.example.demo.CriteriaService
-                – Find products, who has this name
-45792 [http-nio-8080-exec-10] INFO  com.example.demo.Aspect
-                – Method time: 5ms
-45792 [http-nio-8080-exec-10] INFO  com.example.demo.Aspect
-                – Method time: 21ms
-49293 [http-nio-8080-exec-2] INFO  com.example.demo.Aspect
-                – Parameters: UsernamePasswordAuthenticationToken [Principal=User{id=4, Name='Никита', password='$2a$10$1DA6xwtbVkZz6TkPHCfDpero3OPTWNaUSMaI7m4x2W.d/UGocoSTy', type=admin'}, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=66F954F69E9CB54DC47E864CC7567C49], Granted Authorities=[USER]]
-49294 [http-nio-8080-exec-2] INFO  c.e.demo.product.ProductService
-                – Find product, whose productName = кирпичи
-49315 [http-nio-8080-exec-2] INFO  c.e.demo.product.ProductService
-                – Find product, whose productName = кирпичи
-49318 [http-nio-8080-exec-2] INFO  c.example.demo.basket.BasketService
-                – Save busket Товар:кирпичи, Количество:'11'
-49321 [http-nio-8080-exec-2] INFO  c.e.demo.product.ProductService
-                – Find product, whose productName = кирпичи
-49324 [http-nio-8080-exec-2] INFO  c.e.demo.product.ProductService
-                – Find product, whose productName = кирпичи
-49327 [http-nio-8080-exec-2] INFO  c.e.demo.product.ProductService
-                – Find product, whose productName = кирпичи
-49331 [http-nio-8080-exec-2] INFO  c.e.demo.product.ProductService
-                – Save product кирпичи
-49335 [http-nio-8080-exec-2] INFO  c.e.demo.product.ProductService
-                – Find all products
-49345 [http-nio-8080-exec-2] INFO  com.example.demo.Aspect
-                – Method time: 52ms
-53245 [http-nio-8080-exec-4] INFO  com.example.demo.Aspect
-                – Parameters: UsernamePasswordAuthenticationToken [Principal=User{id=4, Name='Никита', password='$2a$10$1DA6xwtbVkZz6TkPHCfDpero3OPTWNaUSMaI7m4x2W.d/UGocoSTy', type=admin'}, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=66F954F69E9CB54DC47E864CC7567C49], Granted Authorities=[USER]]
-53265 [http-nio-8080-exec-4] INFO  com.example.demo.Aspect
-                – Method time: 20ms
-64756 [http-nio-8080-exec-5] INFO  com.example.demo.Aspect
-                – Parameters: UsernamePasswordAuthenticationToken [Principal=User{id=4, Name='Никита', password='$2a$10$1DA6xwtbVkZz6TkPHCfDpero3OPTWNaUSMaI7m4x2W.d/UGocoSTy', type=admin'}, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=66F954F69E9CB54DC47E864CC7567C49], Granted Authorities=[USER]]
-64775 [http-nio-8080-exec-5] INFO  com.example.demo.Aspect
-                – Method time: 19ms
-75437 [http-nio-8080-exec-8] INFO  com.example.demo.Aspect
-                – Parameters: UsernamePasswordAuthenticationToken [Principal=User{id=4, Name='Никита', password='$2a$10$1DA6xwtbVkZz6TkPHCfDpero3OPTWNaUSMaI7m4x2W.d/UGocoSTy', type=admin'}, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=66F954F69E9CB54DC47E864CC7567C49], Granted Authorities=[USER]]
-75454 [http-nio-8080-exec-8] INFO  com.example.demo.Aspect
-                – Method time: 17ms
-78058 [http-nio-8080-exec-10] INFO  com.example.demo.Aspect
-                – Parameters: UsernamePasswordAuthenticationToken [Principal=User{id=4, Name='Никита', password='$2a$10$1DA6xwtbVkZz6TkPHCfDpero3OPTWNaUSMaI7m4x2W.d/UGocoSTy', type=admin'}, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=66F954F69E9CB54DC47E864CC7567C49], Granted Authorities=[USER]]
-78059 [http-nio-8080-exec-10] INFO  com.example.demo.Aspect
-                – Parameters: Никита
-78059 [http-nio-8080-exec-10] INFO  com.example.demo.CriteriaService
-                – Find baskets, who has this name
-78079 [http-nio-8080-exec-10] INFO  com.example.demo.Aspect
-                – Method time: 20ms
-78081 [http-nio-8080-exec-10] INFO  com.example.demo.Aspect
-                – Parameters: Никита
-78082 [http-nio-8080-exec-10] INFO  com.example.demo.CriteriaService
-                – Find baskets, who has this name
-78084 [http-nio-8080-exec-10] INFO  com.example.demo.Aspect
-                – Method time: 3ms
-78085 [http-nio-8080-exec-10] INFO  com.example.demo.Aspect
-                – Method time: 27ms
-80479 [http-nio-8080-exec-2] INFO  com.example.demo.Aspect
-                – Parameters: UsernamePasswordAuthenticationToken [Principal=User{id=4, Name='Никита', password='$2a$10$1DA6xwtbVkZz6TkPHCfDpero3OPTWNaUSMaI7m4x2W.d/UGocoSTy', type=admin'}, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=66F954F69E9CB54DC47E864CC7567C49], Granted Authorities=[USER]]
-80481 [http-nio-8080-exec-2] INFO  c.example.demo.basket.BasketService
-                – Find busket, whose id = 100
-80499 [http-nio-8080-exec-2] INFO  c.e.demo.product.ProductService
-                – Find product, whose productName = кирпичи
-80502 [http-nio-8080-exec-2] INFO  c.example.demo.basket.BasketService
-                – Find busket, whose id = 100
-80503 [http-nio-8080-exec-2] INFO  c.e.demo.product.ProductService
-                – Find product, whose productName = кирпичи
-80505 [http-nio-8080-exec-2] INFO  c.example.demo.basket.BasketService
-                – Find busket, whose id = 100
-80506 [http-nio-8080-exec-2] INFO  c.e.demo.product.ProductService
-                – Find product, whose productName = кирпичи
-80509 [http-nio-8080-exec-2] INFO  c.e.demo.product.ProductService
-                – Save product кирпичи
-80510 [http-nio-8080-exec-2] INFO  c.example.demo.basket.BasketService
-                – Find busket, whose id = 100
-80511 [http-nio-8080-exec-2] INFO  c.example.demo.basket.BasketService
-                – Find busket, whose id = 100
-80511 [http-nio-8080-exec-2] INFO  c.example.demo.basket.BasketService
-                – Find busket, whose id = 100
-80512 [http-nio-8080-exec-2] INFO  c.example.demo.basket.BasketService
-                – Find busket, whose id = 100
-80512 [http-nio-8080-exec-2] INFO  c.example.demo.basket.BasketService
-                – Delete  busket, whose id = 100
-80523 [http-nio-8080-exec-2] INFO  com.example.demo.Aspect
-                – Parameters: Никита
-80523 [http-nio-8080-exec-2] INFO  com.example.demo.CriteriaService
-                – Find baskets, who has this name
-80524 [http-nio-8080-exec-2] INFO  com.example.demo.Aspect
-                – Method time: 1ms
-80529 [http-nio-8080-exec-2] INFO  com.example.demo.Aspect
-                – Parameters: Никита
-80529 [http-nio-8080-exec-2] INFO  com.example.demo.CriteriaService
-                – Find baskets, who has this name
-80531 [http-nio-8080-exec-2] INFO  com.example.demo.Aspect
-                – Method time: 2ms
-80533 [http-nio-8080-exec-2] INFO  com.example.demo.Aspect
-                – Method time: 54ms
-85201 [http-nio-8080-exec-4] INFO  com.example.demo.Aspect
-                – Parameters: UsernamePasswordAuthenticationToken [Principal=User{id=4, Name='Никита', password='$2a$10$1DA6xwtbVkZz6TkPHCfDpero3OPTWNaUSMaI7m4x2W.d/UGocoSTy', type=admin'}, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=66F954F69E9CB54DC47E864CC7567C49], Granted Authorities=[USER]]
-85203 [http-nio-8080-exec-4] INFO  com.example.demo.Aspect
-                – Parameters: Никита
-85203 [http-nio-8080-exec-4] INFO  com.example.demo.CriteriaService
-                – Find baskets, who has this name
-85217 [http-nio-8080-exec-4] INFO  com.example.demo.Aspect
-                – Method time: 14ms
-85218 [http-nio-8080-exec-4] INFO  c.example.demo.basket.BasketService
-                – Delete  busket, whose id = 99
-85221 [http-nio-8080-exec-4] INFO  com.example.demo.Aspect
-                – Parameters: Товар:дрель, Количество:'4'
-91644 [http-nio-8080-exec-4] INFO  com.example.demo.Aspect
-                – Method time: 6423ms
-91645 [http-nio-8080-exec-4] INFO  com.example.demo.Aspect
-                – Parameters: Никита
-91645 [http-nio-8080-exec-4] INFO  com.example.demo.CriteriaService
-                – Find baskets, who has this name
-91648 [http-nio-8080-exec-4] INFO  com.example.demo.Aspect
-                – Method time: 3ms
-91650 [http-nio-8080-exec-4] INFO  com.example.demo.Aspect
-                – Parameters: Никита
-91650 [http-nio-8080-exec-4] INFO  com.example.demo.CriteriaService
-                – Find baskets, who has this name
-91652 [http-nio-8080-exec-4] INFO  com.example.demo.Aspect
-                – Method time: 1ms
-91652 [http-nio-8080-exec-4] INFO  com.example.demo.Aspect
-                – Method time: 6451ms
-108518 [http-nio-8080-exec-5] INFO  com.example.demo.Aspect
-                – Parameters: UsernamePasswordAuthenticationToken [Principal=User{id=4, Name='Никита', password='$2a$10$1DA6xwtbVkZz6TkPHCfDpero3OPTWNaUSMaI7m4x2W.d/UGocoSTy', type=admin'}, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=66F954F69E9CB54DC47E864CC7567C49], Granted Authorities=[USER]]
-108522 [http-nio-8080-exec-5] INFO  c.e.demo.category.CategoryService
+465887 [http-nio-8080-exec-2] INFO  c.e.demo.category.CategoryService
+                – Find category, whose Name = Строительные материалы
+465909 [http-nio-8080-exec-2] INFO  com.example.demo.Aspect
+                – Method time: 24ms
+465911 [http-nio-8080-exec-2] INFO  com.example.demo.Aspect
+                – Method time: 31ms
+468745 [http-nio-8080-exec-4] INFO  com.example.demo.Aspect
+                – Parameters: UsernamePasswordAuthenticationToken [Principal=User{id=7, Name='new_user', password='$2a$10$7NIACv7rxcHc17MMbC4XTOmhG8q8bmxX3VDtSsNH.JEmCI5XbAPHm', type=admin'}, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=7C83FDE6F39EE0951097D41A63306CC8], Granted Authorities=[USER]]
+468749 [http-nio-8080-exec-4] INFO  c.e.demo.category.CategoryService
                 – Find all categories
-108537 [http-nio-8080-exec-5] INFO  com.example.demo.Aspect
-                – Method time: 19ms
-109584 [http-nio-8080-exec-8] INFO  com.example.demo.Aspect
-                – Parameters: UsernamePasswordAuthenticationToken [Principal=User{id=4, Name='Никита', password='$2a$10$1DA6xwtbVkZz6TkPHCfDpero3OPTWNaUSMaI7m4x2W.d/UGocoSTy', type=admin'}, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=66F954F69E9CB54DC47E864CC7567C49], Granted Authorities=[USER]]
-109586 [http-nio-8080-exec-8] INFO  c.e.demo.product.ProductService
+468768 [http-nio-8080-exec-4] INFO  com.example.demo.Aspect
+                – Method time: 23ms
+469590 [http-nio-8080-exec-6] INFO  com.example.demo.Aspect
+                – Parameters: UsernamePasswordAuthenticationToken [Principal=User{id=7, Name='new_user', password='$2a$10$7NIACv7rxcHc17MMbC4XTOmhG8q8bmxX3VDtSsNH.JEmCI5XbAPHm', type=admin'}, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=7C83FDE6F39EE0951097D41A63306CC8], Granted Authorities=[USER]]
+469594 [http-nio-8080-exec-6] INFO  c.e.demo.product.ProductService
                 – Find all products
-109594 [http-nio-8080-exec-8] INFO  com.example.demo.Aspect
+469603 [http-nio-8080-exec-6] INFO  com.example.demo.Aspect
+                – Method time: 13ms
+474729 [http-nio-8080-exec-8] INFO  com.example.demo.Aspect
+                – Parameters: UsernamePasswordAuthenticationToken [Principal=User{id=7, Name='new_user', password='$2a$10$7NIACv7rxcHc17MMbC4XTOmhG8q8bmxX3VDtSsNH.JEmCI5XbAPHm', type=admin'}, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=7C83FDE6F39EE0951097D41A63306CC8], Granted Authorities=[USER]]
+474734 [http-nio-8080-exec-8] INFO  com.example.demo.Aspect
+                – Method time: 5ms
+486310 [http-nio-8080-exec-10] INFO  com.example.demo.Aspect
+                – Parameters: UsernamePasswordAuthenticationToken [Principal=User{id=7, Name='new_user', password='$2a$10$7NIACv7rxcHc17MMbC4XTOmhG8q8bmxX3VDtSsNH.JEmCI5XbAPHm', type=admin'}, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=7C83FDE6F39EE0951097D41A63306CC8], Granted Authorities=[USER]]
+486313 [http-nio-8080-exec-10] INFO  c.e.demo.category.CategoryService
+                – Find all categories
+486334 [http-nio-8080-exec-10] INFO  com.example.demo.Aspect
+                – Method time: 24ms
+529082 [http-nio-8080-exec-3] INFO  com.example.demo.Aspect
+                – Parameters: {}
+529082 [http-nio-8080-exec-3] INFO  com.example.demo.Aspect
+                – Method time: 0ms
+568605 [http-nio-8080-exec-7] INFO  com.example.demo.Aspect
+                – Parameters: UsernamePasswordAuthenticationToken [Principal=User{id=7, Name='new_user', password='$2a$10$7NIACv7rxcHc17MMbC4XTOmhG8q8bmxX3VDtSsNH.JEmCI5XbAPHm', type=admin'}, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=9CE4AE8175D2C048A1AE0F85738F62E2], Granted Authorities=[USER]]
+568607 [http-nio-8080-exec-7] INFO  c.e.demo.product.ProductService
+                – Find all products
+568615 [http-nio-8080-exec-7] INFO  com.example.demo.Aspect
                 – Method time: 10ms
+570667 [http-nio-8080-exec-9] INFO  com.example.demo.Aspect
+                – Parameters: UsernamePasswordAuthenticationToken [Principal=User{id=7, Name='new_user', password='$2a$10$7NIACv7rxcHc17MMbC4XTOmhG8q8bmxX3VDtSsNH.JEmCI5XbAPHm', type=admin'}, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=9CE4AE8175D2C048A1AE0F85738F62E2], Granted Authorities=[USER]]
+570671 [http-nio-8080-exec-9] INFO  c.e.demo.category.CategoryService
+                – Find all categories
+570686 [http-nio-8080-exec-9] INFO  com.example.demo.Aspect
+                – Method time: 19ms
+658211 [http-nio-8080-exec-2] INFO  com.example.demo.Aspect
+                – Parameters: UsernamePasswordAuthenticationToken [Principal=User{id=7, Name='new_user', password='$2a$10$7NIACv7rxcHc17MMbC4XTOmhG8q8bmxX3VDtSsNH.JEmCI5XbAPHm', type=admin'}, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=9CE4AE8175D2C048A1AE0F85738F62E2], Granted Authorities=[USER]]
+658214 [http-nio-8080-exec-2] INFO  com.example.demo.Aspect
+                – Parameters: Строительные материалы
+658214 [http-nio-8080-exec-2] INFO  com.example.demo.CriteriaService
+                – Find products, who has this category
+658214 [http-nio-8080-exec-2] INFO  c.e.demo.category.CategoryService
+                – Find category, whose Name = Строительные материалы
+658220 [http-nio-8080-exec-2] INFO  com.example.demo.Aspect
+                – Method time: 6ms
+658221 [http-nio-8080-exec-2] INFO  com.example.demo.Aspect
+                – Method time: 10ms
+722277 [http-nio-8080-exec-5] INFO  com.example.demo.Aspect
+                – Parameters: UsernamePasswordAuthenticationToken [Principal=User{id=7, Name='new_user', password='$2a$10$7NIACv7rxcHc17MMbC4XTOmhG8q8bmxX3VDtSsNH.JEmCI5XbAPHm', type=admin'}, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=9CE4AE8175D2C048A1AE0F85738F62E2], Granted Authorities=[USER]]
+722279 [http-nio-8080-exec-5] INFO  c.e.demo.category.CategoryService
+                – Find all categories
+722296 [http-nio-8080-exec-5] INFO  com.example.demo.Aspect
+                – Method time: 19ms
+723181 [http-nio-8080-exec-7] INFO  com.example.demo.Aspect
+                – Parameters: UsernamePasswordAuthenticationToken [Principal=User{id=7, Name='new_user', password='$2a$10$7NIACv7rxcHc17MMbC4XTOmhG8q8bmxX3VDtSsNH.JEmCI5XbAPHm', type=admin'}, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=9CE4AE8175D2C048A1AE0F85738F62E2], Granted Authorities=[USER]]
+723184 [http-nio-8080-exec-7] INFO  c.e.demo.product.ProductService
+                – Find all products
+723190 [http-nio-8080-exec-7] INFO  com.example.demo.Aspect
+                – Method time: 9ms
+799058 [http-nio-8080-exec-10] INFO  com.example.demo.Aspect
+                – Parameters: UsernamePasswordAuthenticationToken [Principal=User{id=7, Name='new_user', password='$2a$10$7NIACv7rxcHc17MMbC4XTOmhG8q8bmxX3VDtSsNH.JEmCI5XbAPHm', type=admin'}, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=9CE4AE8175D2C048A1AE0F85738F62E2], Granted Authorities=[USER]]
+799062 [http-nio-8080-exec-10] INFO  com.example.demo.Aspect
+                – Parameters: Гипсокартон
+799062 [http-nio-8080-exec-10] INFO  com.example.demo.CriteriaService
+                – Find products, who has this name
+799066 [http-nio-8080-exec-10] INFO  com.example.demo.Aspect
+                – Method time: 4ms
+799067 [http-nio-8080-exec-10] INFO  com.example.demo.Aspect
+                – Method time: 9ms
+801099 [http-nio-8080-exec-2] INFO  com.example.demo.Aspect
+                – Parameters: UsernamePasswordAuthenticationToken [Principal=User{id=7, Name='new_user', password='$2a$10$7NIACv7rxcHc17MMbC4XTOmhG8q8bmxX3VDtSsNH.JEmCI5XbAPHm', type=admin'}, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=9CE4AE8175D2C048A1AE0F85738F62E2], Granted Authorities=[USER]]
+801102 [http-nio-8080-exec-2] INFO  c.e.demo.product.ProductService
+                – Find all products
+801109 [http-nio-8080-exec-2] INFO  com.example.demo.Aspect
+                – Method time: 10ms
+805664 [http-nio-8080-exec-4] INFO  com.example.demo.Aspect
+                – Parameters: UsernamePasswordAuthenticationToken [Principal=User{id=7, Name='new_user', password='$2a$10$7NIACv7rxcHc17MMbC4XTOmhG8q8bmxX3VDtSsNH.JEmCI5XbAPHm', type=admin'}, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=9CE4AE8175D2C048A1AE0F85738F62E2], Granted Authorities=[USER]]
+805668 [http-nio-8080-exec-4] INFO  com.example.demo.Aspect
+                – Parameters: гипсокартон
+805668 [http-nio-8080-exec-4] INFO  com.example.demo.CriteriaService
+                – Find products, who has this name
+805669 [http-nio-8080-exec-4] INFO  com.example.demo.Aspect
+                – Method time: 1ms
+805670 [http-nio-8080-exec-4] INFO  com.example.demo.Aspect
+                – Method time: 6ms
+940705 [http-nio-8080-exec-7] INFO  com.example.demo.Aspect
+                – Parameters: UsernamePasswordAuthenticationToken [Principal=User{id=7, Name='new_user', password='$2a$10$7NIACv7rxcHc17MMbC4XTOmhG8q8bmxX3VDtSsNH.JEmCI5XbAPHm', type=admin'}, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=9CE4AE8175D2C048A1AE0F85738F62E2], Granted Authorities=[USER]]
+940708 [http-nio-8080-exec-7] INFO  c.e.demo.product.ProductService
+                – Find all products
+940715 [http-nio-8080-exec-7] INFO  com.example.demo.Aspect
+                – Method time: 9ms
+941413 [http-nio-8080-exec-9] INFO  com.example.demo.Aspect
+                – Parameters: UsernamePasswordAuthenticationToken [Principal=User{id=7, Name='new_user', password='$2a$10$7NIACv7rxcHc17MMbC4XTOmhG8q8bmxX3VDtSsNH.JEmCI5XbAPHm', type=admin'}, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=9CE4AE8175D2C048A1AE0F85738F62E2], Granted Authorities=[USER]]
+941420 [http-nio-8080-exec-9] INFO  com.example.demo.Aspect
+                – Method time: 7ms
+975768 [http-nio-8080-exec-1] INFO  com.example.demo.Aspect
+                – Parameters: UsernamePasswordAuthenticationToken [Principal=User{id=7, Name='new_user', password='$2a$10$7NIACv7rxcHc17MMbC4XTOmhG8q8bmxX3VDtSsNH.JEmCI5XbAPHm', type=admin'}, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=9CE4AE8175D2C048A1AE0F85738F62E2], Granted Authorities=[USER]]
+975771 [http-nio-8080-exec-1] INFO  com.example.demo.Aspect
+                – Method time: 3ms
+1030929 [http-nio-8080-exec-3] INFO  com.example.demo.Aspect
+                – Parameters: UsernamePasswordAuthenticationToken [Principal=User{id=7, Name='new_user', password='$2a$10$7NIACv7rxcHc17MMbC4XTOmhG8q8bmxX3VDtSsNH.JEmCI5XbAPHm', type=admin'}, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=9CE4AE8175D2C048A1AE0F85738F62E2], Granted Authorities=[USER]]
+1030932 [http-nio-8080-exec-3] INFO  c.e.demo.product.ProductService
+                – Find all products
+1030937 [http-nio-8080-exec-3] INFO  com.example.demo.Aspect
+                – Method time: 8ms
+1034199 [http-nio-8080-exec-5] INFO  com.example.demo.Aspect
+                – Parameters: UsernamePasswordAuthenticationToken [Principal=User{id=7, Name='new_user', password='$2a$10$7NIACv7rxcHc17MMbC4XTOmhG8q8bmxX3VDtSsNH.JEmCI5XbAPHm', type=admin'}, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=9CE4AE8175D2C048A1AE0F85738F62E2], Granted Authorities=[USER]]
+1034200 [http-nio-8080-exec-5] INFO  c.e.demo.product.ProductService
+                – Find product, whose productName = уровень
+1034207 [http-nio-8080-exec-5] INFO  c.e.demo.product.ProductService
+                – Find product, whose productName = уровень
+1034214 [http-nio-8080-exec-5] INFO  c.example.demo.basket.BasketService
+                – Save busket Товар:уровень, Количество:'12'
+1034568 [http-nio-8080-exec-5] INFO  c.e.demo.product.ProductService
+                – Find product, whose productName = уровень
+1034570 [http-nio-8080-exec-5] INFO  c.e.demo.product.ProductService
+                – Find product, whose productName = уровень
+1034572 [http-nio-8080-exec-5] INFO  c.e.demo.product.ProductService
+                – Find product, whose productName = уровень
+1034579 [http-nio-8080-exec-5] INFO  c.e.demo.product.ProductService
+                – Save product уровень
+1034588 [http-nio-8080-exec-5] INFO  c.e.demo.product.ProductService
+                – Find all products
+1034591 [http-nio-8080-exec-5] INFO  com.example.demo.Aspect
+                – Method time: 392ms
+1037456 [http-nio-8080-exec-7] INFO  com.example.demo.Aspect
+                – Parameters: UsernamePasswordAuthenticationToken [Principal=User{id=7, Name='new_user', password='$2a$10$7NIACv7rxcHc17MMbC4XTOmhG8q8bmxX3VDtSsNH.JEmCI5XbAPHm', type=admin'}, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=9CE4AE8175D2C048A1AE0F85738F62E2], Granted Authorities=[USER]]
+1037457 [http-nio-8080-exec-7] INFO  c.e.demo.product.ProductService
+                – Find product, whose productName = подъемный кран
+1037465 [http-nio-8080-exec-7] INFO  c.e.demo.product.ProductService
+                – Find product, whose productName = подъемный кран
+1037467 [http-nio-8080-exec-7] INFO  c.example.demo.basket.BasketService
+                – Save busket Товар:подъемный кран, Количество:'12'
+1037469 [http-nio-8080-exec-7] INFO  c.e.demo.product.ProductService
+                – Find product, whose productName = подъемный кран
+1037472 [http-nio-8080-exec-7] INFO  c.e.demo.product.ProductService
+                – Find product, whose productName = подъемный кран
+1037474 [http-nio-8080-exec-7] INFO  c.e.demo.product.ProductService
+                – Find product, whose productName = подъемный кран
+1037476 [http-nio-8080-exec-7] INFO  c.e.demo.product.ProductService
+                – Save product подъемный кран
+1037479 [http-nio-8080-exec-7] INFO  c.e.demo.product.ProductService
+                – Find all products
+1037482 [http-nio-8080-exec-7] INFO  com.example.demo.Aspect
+                – Method time: 26ms
+1041949 [http-nio-8080-exec-9] INFO  com.example.demo.Aspect
+                – Parameters: UsernamePasswordAuthenticationToken [Principal=User{id=7, Name='new_user', password='$2a$10$7NIACv7rxcHc17MMbC4XTOmhG8q8bmxX3VDtSsNH.JEmCI5XbAPHm', type=admin'}, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=9CE4AE8175D2C048A1AE0F85738F62E2], Granted Authorities=[USER]]
+1041950 [http-nio-8080-exec-9] INFO  c.e.demo.product.ProductService
+                – Find product, whose productName = генератор энергии
+1041965 [http-nio-8080-exec-9] INFO  c.e.demo.product.ProductService
+                – Find product, whose productName = генератор энергии
+1041968 [http-nio-8080-exec-9] INFO  c.example.demo.basket.BasketService
+                – Save busket Товар:генератор энергии, Количество:'26'
+1041971 [http-nio-8080-exec-9] INFO  c.e.demo.product.ProductService
+                – Find product, whose productName = генератор энергии
+1041972 [http-nio-8080-exec-9] INFO  c.e.demo.product.ProductService
+                – Find product, whose productName = генератор энергии
+1041973 [http-nio-8080-exec-9] INFO  c.e.demo.product.ProductService
+                – Find product, whose productName = генератор энергии
+1041978 [http-nio-8080-exec-9] INFO  c.e.demo.product.ProductService
+                – Save product генератор энергии
+1041981 [http-nio-8080-exec-9] INFO  c.e.demo.product.ProductService
+                – Find all products
+1041985 [http-nio-8080-exec-9] INFO  com.example.demo.Aspect
+                – Method time: 36ms
+1045593 [http-nio-8080-exec-1] INFO  com.example.demo.Aspect
+                – Parameters: UsernamePasswordAuthenticationToken [Principal=User{id=7, Name='new_user', password='$2a$10$7NIACv7rxcHc17MMbC4XTOmhG8q8bmxX3VDtSsNH.JEmCI5XbAPHm', type=admin'}, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=9CE4AE8175D2C048A1AE0F85738F62E2], Granted Authorities=[USER]]
+1045594 [http-nio-8080-exec-1] INFO  c.e.demo.product.ProductService
+                – Find product, whose productName = уголки
+1045608 [http-nio-8080-exec-1] INFO  c.e.demo.product.ProductService
+                – Find product, whose productName = уголки
+1045609 [http-nio-8080-exec-1] INFO  c.example.demo.basket.BasketService
+                – Save busket Товар:уголки, Количество:'28'
+1045612 [http-nio-8080-exec-1] INFO  c.e.demo.product.ProductService
+                – Find product, whose productName = уголки
+1045615 [http-nio-8080-exec-1] INFO  c.e.demo.product.ProductService
+                – Find product, whose productName = уголки
+1045617 [http-nio-8080-exec-1] INFO  c.e.demo.product.ProductService
+                – Find product, whose productName = уголки
+1045620 [http-nio-8080-exec-1] INFO  c.e.demo.product.ProductService
+                – Save product уголки
+1045623 [http-nio-8080-exec-1] INFO  c.e.demo.product.ProductService
+                – Find all products
+1045625 [http-nio-8080-exec-1] INFO  com.example.demo.Aspect
+                – Method time: 32ms
+1048994 [http-nio-8080-exec-3] INFO  com.example.demo.Aspect
+                – Parameters: UsernamePasswordAuthenticationToken [Principal=User{id=7, Name='new_user', password='$2a$10$7NIACv7rxcHc17MMbC4XTOmhG8q8bmxX3VDtSsNH.JEmCI5XbAPHm', type=admin'}, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=9CE4AE8175D2C048A1AE0F85738F62E2], Granted Authorities=[USER]]
+1048995 [http-nio-8080-exec-3] INFO  c.e.demo.product.ProductService
+                – Find product, whose productName = металл
+1049008 [http-nio-8080-exec-3] INFO  c.e.demo.product.ProductService
+                – Find product, whose productName = металл
+1049010 [http-nio-8080-exec-3] INFO  c.example.demo.basket.BasketService
+                – Save busket Товар:металл, Количество:'4'
+1049013 [http-nio-8080-exec-3] INFO  c.e.demo.product.ProductService
+                – Find product, whose productName = металл
+1049014 [http-nio-8080-exec-3] INFO  c.e.demo.product.ProductService
+                – Find product, whose productName = металл
+1049016 [http-nio-8080-exec-3] INFO  c.e.demo.product.ProductService
+                – Find product, whose productName = металл
+1049020 [http-nio-8080-exec-3] INFO  c.e.demo.product.ProductService
+                – Save product металл
+1049024 [http-nio-8080-exec-3] INFO  c.e.demo.product.ProductService
+                – Find all products
+1049025 [http-nio-8080-exec-3] INFO  com.example.demo.Aspect
+                – Method time: 31ms
+1051335 [http-nio-8080-exec-5] INFO  com.example.demo.Aspect
+                – Parameters: UsernamePasswordAuthenticationToken [Principal=User{id=7, Name='new_user', password='$2a$10$7NIACv7rxcHc17MMbC4XTOmhG8q8bmxX3VDtSsNH.JEmCI5XbAPHm', type=admin'}, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=9CE4AE8175D2C048A1AE0F85738F62E2], Granted Authorities=[USER]]
+1051336 [http-nio-8080-exec-5] INFO  com.example.demo.Aspect
+                – Parameters: new_user
+1051336 [http-nio-8080-exec-5] INFO  com.example.demo.CriteriaService
+                – Find baskets, who has this name
+1051362 [http-nio-8080-exec-5] INFO  com.example.demo.Aspect
+                – Method time: 26ms
+1051365 [http-nio-8080-exec-5] INFO  com.example.demo.Aspect
+                – Parameters: new_user
+1051365 [http-nio-8080-exec-5] INFO  com.example.demo.CriteriaService
+                – Find baskets, who has this name
+1051367 [http-nio-8080-exec-5] INFO  com.example.demo.Aspect
+                – Method time: 2ms
+1051368 [http-nio-8080-exec-5] INFO  com.example.demo.Aspect
+                – Method time: 33ms
+1105055 [http-nio-8080-exec-7] INFO  com.example.demo.Aspect
+                – Parameters: UsernamePasswordAuthenticationToken [Principal=User{id=7, Name='new_user', password='$2a$10$7NIACv7rxcHc17MMbC4XTOmhG8q8bmxX3VDtSsNH.JEmCI5XbAPHm', type=admin'}, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=9CE4AE8175D2C048A1AE0F85738F62E2], Granted Authorities=[USER]]
+1105057 [http-nio-8080-exec-7] INFO  com.example.demo.Aspect
+                – Parameters: new_user
+1105057 [http-nio-8080-exec-7] INFO  com.example.demo.CriteriaService
+                – Find baskets, who has this name
+1105069 [http-nio-8080-exec-7] INFO  com.example.demo.Aspect
+                – Method time: 12ms
+1105069 [http-nio-8080-exec-7] INFO  c.example.demo.basket.BasketService
+                – Delete  busket, whose id = 107
+1105093 [http-nio-8080-exec-7] INFO  c.example.demo.basket.BasketService
+                – Delete  busket, whose id = 108
+1105095 [http-nio-8080-exec-7] INFO  c.example.demo.basket.BasketService
+                – Delete  busket, whose id = 109
+1105098 [http-nio-8080-exec-7] INFO  c.example.demo.basket.BasketService
+                – Delete  busket, whose id = 110
+1105109 [http-nio-8080-exec-7] INFO  c.example.demo.basket.BasketService
+                – Delete  busket, whose id = 111
+1105113 [http-nio-8080-exec-7] INFO  com.example.demo.Aspect
+                – Parameters: Товар:уровень, Количество:'12'Товар:подъемный кран, Количество:'12'Товар:генератор энергии, Количество:'26'Товар:уголки, Количество:'28'Товар:металл, Количество:'4'
+1111824 [http-nio-8080-exec-7] INFO  com.example.demo.Aspect
+                – Method time: 6711ms
+1111825 [http-nio-8080-exec-7] INFO  com.example.demo.Aspect
+                – Parameters: new_user
+1111825 [http-nio-8080-exec-7] INFO  com.example.demo.CriteriaService
+                – Find baskets, who has this name
+1111826 [http-nio-8080-exec-7] INFO  com.example.demo.Aspect
+                – Method time: 1ms
+1111829 [http-nio-8080-exec-7] INFO  com.example.demo.Aspect
+                – Parameters: new_user
+1111829 [http-nio-8080-exec-7] INFO  com.example.demo.CriteriaService
+                – Find baskets, who has this name
+1111831 [http-nio-8080-exec-7] INFO  com.example.demo.Aspect
+                – Method time: 2ms
+1111831 [http-nio-8080-exec-7] INFO  com.example.demo.Aspect
+                – Method time: 6776ms
+1190719 [http-nio-8080-exec-10] INFO  com.example.demo.Aspect
+                – Parameters: UsernamePasswordAuthenticationToken [Principal=User{id=7, Name='new_user', password='$2a$10$7NIACv7rxcHc17MMbC4XTOmhG8q8bmxX3VDtSsNH.JEmCI5XbAPHm', type=admin'}, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=9CE4AE8175D2C048A1AE0F85738F62E2], Granted Authorities=[USER]]
+1190723 [http-nio-8080-exec-10] INFO  com.example.demo.Aspect
+                – Method time: 4ms
+1428333 [http-nio-8080-exec-5] INFO  com.example.demo.Aspect
+                – Parameters: UsernamePasswordAuthenticationToken [Principal=User{id=4, Name='Никита', password='$2a$10$1DA6xwtbVkZz6TkPHCfDpero3OPTWNaUSMaI7m4x2W.d/UGocoSTy', type=admin'}, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=3309451B2DA325AE0EB986BCC3EB1509], Granted Authorities=[USER]]
+1428335 [http-nio-8080-exec-5] INFO  c.e.demo.product.ProductService
+                – Find all products
+1428340 [http-nio-8080-exec-5] INFO  com.example.demo.Aspect
+                – Method time: 7ms
+1450257 [http-nio-8080-exec-7] INFO  com.example.demo.Aspect
+                – Parameters: UsernamePasswordAuthenticationToken [Principal=User{id=4, Name='Никита', password='$2a$10$1DA6xwtbVkZz6TkPHCfDpero3OPTWNaUSMaI7m4x2W.d/UGocoSTy', type=admin'}, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=3309451B2DA325AE0EB986BCC3EB1509], Granted Authorities=[USER]]
+1450260 [http-nio-8080-exec-7] INFO  com.example.demo.Aspect
+                – Parameters: уровень
+1450260 [http-nio-8080-exec-7] INFO  com.example.demo.CriteriaService
+                – Find products, who has this name
+1450261 [http-nio-8080-exec-7] INFO  com.example.demo.Aspect
+                – Method time: 1ms
+1450261 [http-nio-8080-exec-7] INFO  com.example.demo.Aspect
+                – Method time: 4ms
+912  [restartedMain] INFO  com.example.demo.DemoApplication
+                – Starting DemoApplication using Java 16.0.1 on LAPTOP-A1OJIE9H with PID 19140 (D:\study\curs3\java_cursovaya\target\classes started by bigre in D:\study\curs3\java_cursovaya)
+916  [restartedMain] INFO  com.example.demo.DemoApplication
+                – No active profile set, falling back to default profiles: default
+1015 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor
+                – Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+1015 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor
+                – For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+1779 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate
+                – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+1865 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate
+                – Finished Spring Data repository scanning in 72 ms. Found 4 JPA repository interfaces.
+2558 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+                – Tomcat initialized with port(s): 8080 (http)
+2565 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol
+                – Initializing ProtocolHandler ["http-nio-8080"]
+2566 [restartedMain] INFO  o.a.catalina.core.StandardService
+                – Starting service [Tomcat]
+2566 [restartedMain] INFO  o.a.catalina.core.StandardEngine
+                – Starting Servlet engine: [Apache Tomcat/9.0.44]
+2657 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]
+                – Initializing Spring embedded WebApplicationContext
+2657 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext
+                – Root WebApplicationContext: initialization completed in 1640 ms
+2804 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource
+                – HikariPool-1 - Starting...
+3059 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource
+                – HikariPool-1 - Start completed.
+3101 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper
+                – HHH000204: Processing PersistenceUnitInfo [name: default]
+3145 [restartedMain] INFO  org.hibernate.Version
+                – HHH000412: Hibernate ORM core version 5.4.29.Final
+3253 [restartedMain] INFO  o.h.annotations.common.Version
+                – HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+3363 [restartedMain] INFO  org.hibernate.dialect.Dialect
+                – HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+3956 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator
+                – HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+3965 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean
+                – Initialized JPA EntityManagerFactory for persistence unit 'default'
+4488 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration
+                – spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+4682 [restartedMain] INFO  o.s.s.w.DefaultSecurityFilterChain
+                – Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7f787955, org.springframework.security.web.context.SecurityContextPersistenceFilter@3071cbc1, org.springframework.security.web.header.HeaderWriterFilter@34e52f01, org.springframework.security.web.authentication.logout.LogoutFilter@64edd7e4, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@29181790, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@467866a2, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@60e25bcf, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5f15d5fe, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3198b9da, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@25d8373d, org.springframework.security.web.session.SessionManagementFilter@db05884, org.springframework.security.web.access.ExceptionTranslationFilter@681ff5a3, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4aa48c3c]
+4811 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor
+                – Initializing ExecutorService 'applicationTaskExecutor'
+4994 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskScheduler
+                – Initializing ExecutorService 'taskScheduler'
+5026 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer
+                – LiveReload server is running on port 35729
+5052 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol
+                – Starting ProtocolHandler ["http-nio-8080"]
+5082 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+                – Tomcat started on port(s): 8080 (http) with context path ''
+5097 [restartedMain] INFO  com.example.demo.DemoApplication
+                – Started DemoApplication in 4.664 seconds (JVM running for 5.718)
+13624 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]
+                – Initializing Spring DispatcherServlet 'dispatcherServlet'
+13624 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet
+                – Initializing Servlet 'dispatcherServlet'
+13625 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet
+                – Completed initialization in 1 ms
+14982 [http-nio-8080-exec-4] INFO  com.example.demo.Aspect
+                – Parameters: UsernamePasswordAuthenticationToken [Principal=User{id=4, Name='Никита', password='$2a$10$1DA6xwtbVkZz6TkPHCfDpero3OPTWNaUSMaI7m4x2W.d/UGocoSTy', type=admin'}, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=296A8084034529F7A47FBB35DCCA364A], Granted Authorities=[USER]]
+14990 [http-nio-8080-exec-4] INFO  com.example.demo.Aspect
+                – Parameters: уровень
+14992 [http-nio-8080-exec-4] INFO  com.example.demo.CriteriaService
+                – Find products, who has this name
+15014 [http-nio-8080-exec-4] INFO  com.example.demo.Aspect
+                – Method time: 24ms
+15015 [http-nio-8080-exec-4] INFO  com.example.demo.Aspect
+                – Method time: 32ms
+28698 [http-nio-8080-exec-6] INFO  com.example.demo.Aspect
+                – Parameters: UsernamePasswordAuthenticationToken [Principal=User{id=4, Name='Никита', password='$2a$10$1DA6xwtbVkZz6TkPHCfDpero3OPTWNaUSMaI7m4x2W.d/UGocoSTy', type=admin'}, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=296A8084034529F7A47FBB35DCCA364A], Granted Authorities=[USER]]
+28704 [http-nio-8080-exec-6] INFO  c.e.demo.product.ProductService
+                – Find all products
+28729 [http-nio-8080-exec-6] INFO  com.example.demo.Aspect
+                – Method time: 31ms
+32608 [http-nio-8080-exec-8] INFO  com.example.demo.Aspect
+                – Parameters: UsernamePasswordAuthenticationToken [Principal=User{id=4, Name='Никита', password='$2a$10$1DA6xwtbVkZz6TkPHCfDpero3OPTWNaUSMaI7m4x2W.d/UGocoSTy', type=admin'}, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=296A8084034529F7A47FBB35DCCA364A], Granted Authorities=[USER]]
+32609 [http-nio-8080-exec-8] INFO  c.e.demo.product.ProductService
+                – Find product, whose productName = валик
+32621 [http-nio-8080-exec-8] INFO  c.e.demo.product.ProductService
+                – Find product, whose productName = валик
+32629 [http-nio-8080-exec-8] INFO  c.example.demo.basket.BasketService
+                – Save busket Товар:валик, Количество:'16'
+32650 [http-nio-8080-exec-8] INFO  c.e.demo.product.ProductService
+                – Find product, whose productName = валик
+32653 [http-nio-8080-exec-8] INFO  c.e.demo.product.ProductService
+                – Find product, whose productName = валик
+32655 [http-nio-8080-exec-8] INFO  c.e.demo.product.ProductService
+                – Find product, whose productName = валик
+32662 [http-nio-8080-exec-8] INFO  c.e.demo.product.ProductService
+                – Save product валик
+32674 [http-nio-8080-exec-8] INFO  c.e.demo.product.ProductService
+                – Find all products
+32686 [http-nio-8080-exec-8] INFO  com.example.demo.Aspect
+                – Method time: 78ms
+36527 [http-nio-8080-exec-10] INFO  com.example.demo.Aspect
+                – Parameters: UsernamePasswordAuthenticationToken [Principal=User{id=4, Name='Никита', password='$2a$10$1DA6xwtbVkZz6TkPHCfDpero3OPTWNaUSMaI7m4x2W.d/UGocoSTy', type=admin'}, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=296A8084034529F7A47FBB35DCCA364A], Granted Authorities=[USER]]
+36528 [http-nio-8080-exec-10] INFO  c.e.demo.product.ProductService
+                – Find product, whose productName = тахеометр
+36547 [http-nio-8080-exec-10] INFO  c.e.demo.product.ProductService
+                – Find product, whose productName = тахеометр
+36549 [http-nio-8080-exec-10] INFO  c.example.demo.basket.BasketService
+                – Save busket Товар:тахеометр, Количество:'11'
+36551 [http-nio-8080-exec-10] INFO  c.e.demo.product.ProductService
+                – Find product, whose productName = тахеометр
+36553 [http-nio-8080-exec-10] INFO  c.e.demo.product.ProductService
+                – Find product, whose productName = тахеометр
+36555 [http-nio-8080-exec-10] INFO  c.e.demo.product.ProductService
+                – Find product, whose productName = тахеометр
+36559 [http-nio-8080-exec-10] INFO  c.e.demo.product.ProductService
+                – Save product тахеометр
+36564 [http-nio-8080-exec-10] INFO  c.e.demo.product.ProductService
+                – Find all products
+36569 [http-nio-8080-exec-10] INFO  com.example.demo.Aspect
+                – Method time: 42ms
+44391 [http-nio-8080-exec-2] INFO  com.example.demo.Aspect
+                – Parameters: UsernamePasswordAuthenticationToken [Principal=User{id=4, Name='Никита', password='$2a$10$1DA6xwtbVkZz6TkPHCfDpero3OPTWNaUSMaI7m4x2W.d/UGocoSTy', type=admin'}, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=296A8084034529F7A47FBB35DCCA364A], Granted Authorities=[USER]]
+44392 [http-nio-8080-exec-2] INFO  c.e.demo.product.ProductService
+                – Find product, whose productName = экскаватор
+44410 [http-nio-8080-exec-2] INFO  c.e.demo.product.ProductService
+                – Find product, whose productName = экскаватор
+44412 [http-nio-8080-exec-2] INFO  c.example.demo.basket.BasketService
+                – Save busket Товар:экскаватор, Количество:'29'
+44415 [http-nio-8080-exec-2] INFO  c.e.demo.product.ProductService
+                – Find product, whose productName = экскаватор
+44417 [http-nio-8080-exec-2] INFO  c.e.demo.product.ProductService
+                – Find product, whose productName = экскаватор
+44420 [http-nio-8080-exec-2] INFO  c.e.demo.product.ProductService
+                – Find product, whose productName = экскаватор
+44423 [http-nio-8080-exec-2] INFO  c.e.demo.product.ProductService
+                – Save product экскаватор
+44428 [http-nio-8080-exec-2] INFO  c.e.demo.product.ProductService
+                – Find all products
+44431 [http-nio-8080-exec-2] INFO  com.example.demo.Aspect
+                – Method time: 40ms
+48878 [http-nio-8080-exec-4] INFO  com.example.demo.Aspect
+                – Parameters: UsernamePasswordAuthenticationToken [Principal=User{id=4, Name='Никита', password='$2a$10$1DA6xwtbVkZz6TkPHCfDpero3OPTWNaUSMaI7m4x2W.d/UGocoSTy', type=admin'}, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=296A8084034529F7A47FBB35DCCA364A], Granted Authorities=[USER]]
+48879 [http-nio-8080-exec-4] INFO  c.e.demo.product.ProductService
+                – Find product, whose productName = гипсокартон
+48901 [http-nio-8080-exec-4] INFO  c.e.demo.product.ProductService
+                – Find product, whose productName = гипсокартон
+48903 [http-nio-8080-exec-4] INFO  c.example.demo.basket.BasketService
+                – Save busket Товар:гипсокартон, Количество:'45'
+48905 [http-nio-8080-exec-4] INFO  c.e.demo.product.ProductService
+                – Find product, whose productName = гипсокартон
+48908 [http-nio-8080-exec-4] INFO  c.e.demo.product.ProductService
+                – Find product, whose productName = гипсокартон
+48910 [http-nio-8080-exec-4] INFO  c.e.demo.product.ProductService
+                – Find product, whose productName = гипсокартон
+48913 [http-nio-8080-exec-4] INFO  c.e.demo.product.ProductService
+                – Save product гипсокартон
+48918 [http-nio-8080-exec-4] INFO  c.e.demo.product.ProductService
+                – Find all products
+48920 [http-nio-8080-exec-4] INFO  com.example.demo.Aspect
+                – Method time: 42ms
+51223 [http-nio-8080-exec-6] INFO  com.example.demo.Aspect
+                – Parameters: UsernamePasswordAuthenticationToken [Principal=User{id=4, Name='Никита', password='$2a$10$1DA6xwtbVkZz6TkPHCfDpero3OPTWNaUSMaI7m4x2W.d/UGocoSTy', type=admin'}, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=296A8084034529F7A47FBB35DCCA364A], Granted Authorities=[USER]]
+51224 [http-nio-8080-exec-6] INFO  c.e.demo.product.ProductService
+                – Find product, whose productName = трактор
+51247 [http-nio-8080-exec-6] INFO  c.e.demo.product.ProductService
+                – Find product, whose productName = трактор
+51249 [http-nio-8080-exec-6] INFO  c.example.demo.basket.BasketService
+                – Save busket Товар:трактор, Количество:'2'
+51252 [http-nio-8080-exec-6] INFO  c.e.demo.product.ProductService
+                – Find product, whose productName = трактор
+51253 [http-nio-8080-exec-6] INFO  c.e.demo.product.ProductService
+                – Find product, whose productName = трактор
+51255 [http-nio-8080-exec-6] INFO  c.e.demo.product.ProductService
+                – Find product, whose productName = трактор
+51259 [http-nio-8080-exec-6] INFO  c.e.demo.product.ProductService
+                – Save product трактор
+51265 [http-nio-8080-exec-6] INFO  c.e.demo.product.ProductService
+                – Find all products
+51267 [http-nio-8080-exec-6] INFO  com.example.demo.Aspect
+                – Method time: 44ms
+53495 [http-nio-8080-exec-8] INFO  com.example.demo.Aspect
+                – Parameters: UsernamePasswordAuthenticationToken [Principal=User{id=4, Name='Никита', password='$2a$10$1DA6xwtbVkZz6TkPHCfDpero3OPTWNaUSMaI7m4x2W.d/UGocoSTy', type=admin'}, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=296A8084034529F7A47FBB35DCCA364A], Granted Authorities=[USER]]
+53496 [http-nio-8080-exec-8] INFO  c.e.demo.product.ProductService
+                – Find product, whose productName = кирпичи
+53516 [http-nio-8080-exec-8] INFO  c.e.demo.product.ProductService
+                – Find product, whose productName = кирпичи
+53518 [http-nio-8080-exec-8] INFO  c.example.demo.basket.BasketService
+                – Save busket Товар:кирпичи, Количество:'1'
+53519 [http-nio-8080-exec-8] INFO  c.e.demo.product.ProductService
+                – Find product, whose productName = кирпичи
+53521 [http-nio-8080-exec-8] INFO  c.e.demo.product.ProductService
+                – Find product, whose productName = кирпичи
+53522 [http-nio-8080-exec-8] INFO  c.e.demo.product.ProductService
+                – Find product, whose productName = кирпичи
+53527 [http-nio-8080-exec-8] INFO  c.e.demo.product.ProductService
+                – Save product кирпичи
+53532 [http-nio-8080-exec-8] INFO  c.e.demo.product.ProductService
+                – Find all products
+53533 [http-nio-8080-exec-8] INFO  com.example.demo.Aspect
+                – Method time: 38ms
+57593 [http-nio-8080-exec-10] INFO  com.example.demo.Aspect
+                – Parameters: UsernamePasswordAuthenticationToken [Principal=User{id=4, Name='Никита', password='$2a$10$1DA6xwtbVkZz6TkPHCfDpero3OPTWNaUSMaI7m4x2W.d/UGocoSTy', type=admin'}, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=296A8084034529F7A47FBB35DCCA364A], Granted Authorities=[USER]]
+57594 [http-nio-8080-exec-10] INFO  com.example.demo.Aspect
+                – Parameters: Никита
+57594 [http-nio-8080-exec-10] INFO  com.example.demo.CriteriaService
+                – Find baskets, who has this name
+57630 [http-nio-8080-exec-10] INFO  com.example.demo.Aspect
+                – Method time: 36ms
+57632 [http-nio-8080-exec-10] INFO  com.example.demo.Aspect
+                – Parameters: Никита
+57632 [http-nio-8080-exec-10] INFO  com.example.demo.CriteriaService
+                – Find baskets, who has this name
+57634 [http-nio-8080-exec-10] INFO  com.example.demo.Aspect
+                – Method time: 2ms
+57635 [http-nio-8080-exec-10] INFO  com.example.demo.Aspect
+                – Method time: 42ms
+99400 [http-nio-8080-exec-2] INFO  com.example.demo.Aspect
+                – Parameters: UsernamePasswordAuthenticationToken [Principal=User{id=4, Name='Никита', password='$2a$10$1DA6xwtbVkZz6TkPHCfDpero3OPTWNaUSMaI7m4x2W.d/UGocoSTy', type=admin'}, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=296A8084034529F7A47FBB35DCCA364A], Granted Authorities=[USER]]
+99420 [http-nio-8080-exec-2] INFO  com.example.demo.Aspect
+                – Method time: 20ms
+101982 [http-nio-8080-exec-4] INFO  com.example.demo.Aspect
+                – Parameters: UsernamePasswordAuthenticationToken [Principal=User{id=4, Name='Никита', password='$2a$10$1DA6xwtbVkZz6TkPHCfDpero3OPTWNaUSMaI7m4x2W.d/UGocoSTy', type=admin'}, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=296A8084034529F7A47FBB35DCCA364A], Granted Authorities=[USER]]
+101983 [http-nio-8080-exec-4] INFO  com.example.demo.Aspect
+                – Parameters: Никита
+101983 [http-nio-8080-exec-4] INFO  com.example.demo.CriteriaService
+                – Find baskets, who has this name
+101997 [http-nio-8080-exec-4] INFO  com.example.demo.Aspect
+                – Method time: 14ms
+102000 [http-nio-8080-exec-4] INFO  com.example.demo.Aspect
+                – Parameters: Никита
+102000 [http-nio-8080-exec-4] INFO  com.example.demo.CriteriaService
+                – Find baskets, who has this name
+102002 [http-nio-8080-exec-4] INFO  com.example.demo.Aspect
+                – Method time: 2ms
+102003 [http-nio-8080-exec-4] INFO  com.example.demo.Aspect
+                – Method time: 21ms
+103321 [http-nio-8080-exec-6] INFO  com.example.demo.Aspect
+                – Parameters: UsernamePasswordAuthenticationToken [Principal=User{id=4, Name='Никита', password='$2a$10$1DA6xwtbVkZz6TkPHCfDpero3OPTWNaUSMaI7m4x2W.d/UGocoSTy', type=admin'}, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=296A8084034529F7A47FBB35DCCA364A], Granted Authorities=[USER]]
+103338 [http-nio-8080-exec-6] INFO  com.example.demo.Aspect
+                – Method time: 17ms
+105470 [http-nio-8080-exec-8] INFO  com.example.demo.Aspect
+                – Parameters: UsernamePasswordAuthenticationToken [Principal=User{id=4, Name='Никита', password='$2a$10$1DA6xwtbVkZz6TkPHCfDpero3OPTWNaUSMaI7m4x2W.d/UGocoSTy', type=admin'}, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=296A8084034529F7A47FBB35DCCA364A], Granted Authorities=[USER]]
+105471 [http-nio-8080-exec-8] INFO  com.example.demo.Aspect
+                – Parameters: Никита
+105471 [http-nio-8080-exec-8] INFO  com.example.demo.CriteriaService
+                – Find baskets, who has this name
+105481 [http-nio-8080-exec-8] INFO  com.example.demo.Aspect
+                – Method time: 10ms
+105484 [http-nio-8080-exec-8] INFO  com.example.demo.Aspect
+                – Parameters: Никита
+105484 [http-nio-8080-exec-8] INFO  com.example.demo.CriteriaService
+                – Find baskets, who has this name
+105485 [http-nio-8080-exec-8] INFO  com.example.demo.Aspect
+                – Method time: 1ms
+105486 [http-nio-8080-exec-8] INFO  com.example.demo.Aspect
+                – Method time: 16ms
+108407 [http-nio-8080-exec-10] INFO  com.example.demo.Aspect
+                – Parameters: UsernamePasswordAuthenticationToken [Principal=User{id=4, Name='Никита', password='$2a$10$1DA6xwtbVkZz6TkPHCfDpero3OPTWNaUSMaI7m4x2W.d/UGocoSTy', type=admin'}, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=296A8084034529F7A47FBB35DCCA364A], Granted Authorities=[USER]]
+108409 [http-nio-8080-exec-10] INFO  com.example.demo.Aspect
+                – Parameters: Никита
+108409 [http-nio-8080-exec-10] INFO  com.example.demo.CriteriaService
+                – Find baskets, who has this name
+108422 [http-nio-8080-exec-10] INFO  com.example.demo.Aspect
+                – Method time: 13ms
+108422 [http-nio-8080-exec-10] INFO  c.example.demo.basket.BasketService
+                – Delete  busket, whose id = 112
+108435 [http-nio-8080-exec-10] INFO  c.example.demo.basket.BasketService
+                – Delete  busket, whose id = 113
+108437 [http-nio-8080-exec-10] INFO  c.example.demo.basket.BasketService
+                – Delete  busket, whose id = 114
+108440 [http-nio-8080-exec-10] INFO  c.example.demo.basket.BasketService
+                – Delete  busket, whose id = 115
+108445 [http-nio-8080-exec-10] INFO  c.example.demo.basket.BasketService
+                – Delete  busket, whose id = 116
+108447 [http-nio-8080-exec-10] INFO  c.example.demo.basket.BasketService
+                – Delete  busket, whose id = 117
+108450 [http-nio-8080-exec-10] INFO  com.example.demo.Aspect
+                – Parameters: Товар:валик, Количество:'16'Товар:тахеометр, Количество:'11'Товар:экскаватор, Количество:'29'Товар:гипсокартон, Количество:'45'Товар:трактор, Количество:'2'Товар:кирпичи, Количество:'1'
+114682 [http-nio-8080-exec-10] INFO  com.example.demo.Aspect
+                – Method time: 6232ms
+114683 [http-nio-8080-exec-10] INFO  com.example.demo.Aspect
+                – Parameters: Никита
+114683 [http-nio-8080-exec-10] INFO  com.example.demo.CriteriaService
+                – Find baskets, who has this name
+114685 [http-nio-8080-exec-10] INFO  com.example.demo.Aspect
+                – Method time: 2ms
+114690 [http-nio-8080-exec-10] INFO  com.example.demo.Aspect
+                – Parameters: Никита
+114690 [http-nio-8080-exec-10] INFO  com.example.demo.CriteriaService
+                – Find baskets, who has this name
+114691 [http-nio-8080-exec-10] INFO  com.example.demo.Aspect
+                – Method time: 1ms
+114691 [http-nio-8080-exec-10] INFO  com.example.demo.Aspect
+                – Method time: 6284ms
