@@ -47,11 +47,10 @@ public class UserServiceTests {
         user3.setType("role");
     }
     @Test
-    void loadUserByUsername() {
+    void getUserByUsername() {
         Mockito.when(userRepository.findByName("user2")).thenReturn(user2);
         assertEquals(user2, userRepository.findByName("user2"));
     }
-
     @Test
     void create() {
         userService.create("user4", "password", "email","type");
@@ -59,13 +58,11 @@ public class UserServiceTests {
         User captured = captor.getValue();
         assertEquals("user4", captured.getUsername());
     }
-
     @Test
     void getAllUsers() {
         Mockito.when(userRepository.findAll()).thenReturn(List.of(user1, user2, user3));
         assertEquals(List.of(user1, user2, user3), userRepository.findAll());
     }
-
     @Test
     void deleteUser() {
         userService.delete("user1");

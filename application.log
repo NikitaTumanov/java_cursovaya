@@ -8,3 +8,145 @@
                 – Delete  product, whose productName = Лопата
 141  [main] INFO  c.e.demo.category.CategoryService
                 – Save category Category(id=null, name=Аппаратура, products=null)
+152  [main] INFO  c.e.demo.product.ProductService
+                – Delete  product, whose productName = product2
+166  [main] INFO  c.e.demo.product.ProductService
+                – Save product product3
+149  [main] INFO  c.e.demo.category.CategoryService
+                – Delete  category, whose Name = category1
+186  [main] INFO  c.e.demo.category.CategoryService
+                – Save category Category(id=1, name=category1, products=null)
+175  [main] INFO  c.e.demo.product.ProductService
+                – Delete  product, whose productName = product2
+192  [main] INFO  c.e.demo.product.ProductService
+                – Save product product3
+165  [main] INFO  c.e.demo.product.ProductService
+                – Delete  product, whose productName = product2
+184  [main] INFO  c.e.demo.product.ProductService
+                – Save product product3
+126  [main] INFO  c.e.demo.category.CategoryService
+                – Delete  category, whose Name = category1
+156  [main] INFO  c.e.demo.category.CategoryService
+                – Save category Category(id=1, name=category1, products=null)
+135  [main] INFO  c.e.demo.category.CategoryService
+                – Delete  category, whose Name = category1
+172  [main] INFO  c.e.demo.category.CategoryService
+                – Save category Category(id=1, name=category1, products=null)
+127  [main] INFO  c.e.demo.category.CategoryService
+                – Delete  category, whose Name = category1
+160  [main] INFO  c.e.demo.category.CategoryService
+                – Save category Category(id=1, name=category1, products=null)
+158  [main] INFO  c.e.demo.product.ProductService
+                – Delete  product, whose productName = product2
+176  [main] INFO  c.e.demo.product.ProductService
+                – Save product product3
+131  [main] INFO  c.example.demo.basket.BasketService
+                – Delete  busket, whose id = 1
+146  [main] INFO  c.example.demo.basket.BasketService
+                – Find busket, whose id = null
+124  [main] INFO  c.example.demo.basket.BasketService
+                – Delete  busket, whose id = 1
+138  [main] INFO  c.example.demo.basket.BasketService
+                – Find busket, whose id = null
+138  [main] INFO  c.example.demo.basket.BasketService
+                – Save busket Товар:null, Количество:'300'
+127  [main] INFO  c.example.demo.basket.BasketService
+                – Save busket Товар:null, Количество:'100'
+131  [main] INFO  c.example.demo.basket.BasketService
+                – Save busket Товар:product1, Количество:'100'
+144  [main] INFO  c.example.demo.basket.BasketService
+                – Save busket Товар:product1, Количество:'200'
+118  [main] INFO  c.example.demo.basket.BasketService
+                – Save busket Товар:product1, Количество:'100'
+139  [main] INFO  c.example.demo.basket.BasketService
+                – Save busket Товар:product1, Количество:'200'
+129  [main] INFO  c.example.demo.basket.BasketService
+                – Save busket Товар:product1, Количество:'100'
+130  [main] INFO  c.example.demo.basket.BasketService
+                – Save busket Товар:product1, Количество:'100'
+138  [main] INFO  c.example.demo.basket.BasketService
+                – Save busket Товар:product1, Количество:'100'
+117  [main] INFO  c.example.demo.basket.BasketService
+                – Save busket Товар:product1, Количество:'100'
+126  [main] INFO  c.example.demo.basket.BasketService
+                – Save busket Товар:product1, Количество:'100'
+144  [main] INFO  c.e.demo.product.ProductService
+                – Save product product1
+149  [main] INFO  c.e.demo.product.ProductService
+                – Save product product1
+166  [main] INFO  c.e.demo.product.ProductService
+                – Save product product1
+182  [main] INFO  com.example.demo.CriteriaService
+                – Find products, who has this category
+157  [main] INFO  c.e.demo.product.ProductService
+                – Save product product1
+189  [main] INFO  com.example.demo.CriteriaService
+                – Find products, who has this category
+157  [main] INFO  c.e.demo.product.ProductService
+                – Save product product1
+175  [main] INFO  com.example.demo.CriteriaService
+                – Find products, who has this category
+158  [main] INFO  c.e.demo.product.ProductService
+                – Save product product1
+181  [main] INFO  com.example.demo.CriteriaService
+                – Find products, who has this category
+188  [main] INFO  c.e.demo.product.ProductService
+                – Save product product1
+23616 [main] INFO  com.example.demo.CriteriaService
+                – Find products, who has this category
+172  [main] INFO  c.e.demo.product.ProductService
+                – Save product product1
+197  [main] INFO  com.example.demo.CriteriaService
+                – Find products, who has this category
+152  [main] INFO  c.e.demo.product.ProductService
+                – Save product product1
+175  [main] INFO  com.example.demo.CriteriaService
+                – Find products, who has this category
+362  [main] INFO  c.example.demo.basket.BasketService
+                – Save busket Товар:product1, Количество:'100'
+460  [main] INFO  c.e.demo.product.ProductService
+                – Save product product1
+284  [main] INFO  c.e.demo.product.ProductService
+                – Save product product1
+294  [main] INFO  c.e.demo.product.ProductService
+                – Save product product1
+331  [main] INFO  c.example.demo.basket.BasketService
+                – Save busket Товар:product1, Количество:'100'
+337  [main] INFO  c.e.demo.product.ProductService
+                – Save product product1
+329  [main] INFO  c.example.demo.basket.BasketService
+                – Save busket Товар:product1, Количество:'100'
+353  [main] INFO  c.example.demo.basket.BasketService
+                – Save busket Товар:product1, Количество:'200'
+264  [main] INFO  c.example.demo.basket.BasketService
+                – Save busket Товар:product1, Количество:'100'
+284  [main] INFO  c.example.demo.basket.BasketService
+                – Save busket Товар:product1, Количество:'200'
+258  [main] INFO  c.example.demo.basket.BasketService
+                – Save busket Товар:product1, Количество:'100'
+274  [main] INFO  c.example.demo.basket.BasketService
+                – Save busket Товар:product1, Количество:'200'
+359  [main] INFO  c.example.demo.basket.BasketService
+                – Save busket Товар:product1, Количество:'100'
+394  [main] INFO  c.example.demo.basket.BasketService
+                – Save busket Товар:product1, Количество:'200'
+271  [main] INFO  c.example.demo.basket.BasketService
+                – Save busket Товар:product1, Количество:'100'
+240  [main] INFO  c.e.demo.product.ProductService
+                – Save product product1
+284  [main] INFO  c.example.demo.basket.BasketService
+                – Save busket Товар:product1, Количество:'100'
+289  [main] INFO  c.e.demo.product.ProductService
+                – Save product product1
+227  [main] INFO  c.e.demo.product.ProductService
+                – Save product product1
+261  [main] INFO  c.example.demo.basket.BasketService
+                – Save busket Товар:product1, Количество:'100'
+266  [main] INFO  c.e.demo.product.ProductService
+                – Save product product1
+268  [main] INFO  c.e.demo.product.ProductService
+                – Save product product1
+311  [main] INFO  c.example.demo.basket.BasketService
+                – Save busket Товар:product1, Количество:'100'
+318  [main] INFO  c.e.demo.product.ProductService
+                – Save product product1
