@@ -22,29 +22,54 @@ import javax.persistence.criteria.Root;
 import javax.transaction.Transactional;
 import java.util.List;
 
+/**
+ * Класс, отвечающий за фильтрацию.
+ */
 @Component
 @RequiredArgsConstructor
 @Slf4j
 @Transactional
 public class CriteriaService {
+    /**
+     * Сервис работы с категориями.
+     */
     @Autowired
     private CategoryService categoryService;
+    /**
+     * Сервис работы с пользователями.
+     */
     @Autowired
     private UserService userService;
-
+    /**
+     * Неизменяемый потокобезопасный объект с компилированным маппингом для одной базы данных.
+     */
     private final SessionFactory sessionFactory;
+    /**
+     * Объект используется для операций с базами данных.
+     */
     private Session session;
 
+    /**
+     * Инициализация сессии для работы с БД. Работает сразу после build проекта.
+     */
     @PostConstruct
     void init() {
         session = sessionFactory.openSession();
     }
 
+    /**
+     * Закрывает сессию перед окончанием работы проекта.
+     */
     @PreDestroy
     void closeSession() {
         session.close();
     }
 
+    /**
+     * Метод фильтрации продуктов по катеогрии.
+     * @param category Название категории.
+     * @return Вернуть отфильтрованный список товаров по категории.
+     */
     public List<Product> takeByCategory(String category) {
         log.info("Find products, who has this category");
         CriteriaBuilder builder = session.getCriteriaBuilder();
@@ -55,6 +80,11 @@ public class CriteriaService {
         return query.getResultList();
     }
 
+    /**
+     * Метод фильтрации корзин по пользователю.
+     * @param name Имя пользователя.
+     * @return Вернуть отфильтрованный список корзин.
+     */
     public List<Basket> takeByUser(String name) {
         log.info("Find baskets, who has this name");
         CriteriaBuilder builder = session.getCriteriaBuilder();
@@ -65,6 +95,11 @@ public class CriteriaService {
         return query.getResultList();
     }
 
+    /**
+     * Метод фильтрации продуктов по названию продукта.
+     * @param name Название продукта.
+     * @return Вернуть список отфильтрованных продуктов.
+     */
     public List<Product> takeByProductName(String name) {
         log.info("Find products, who has this name");
         CriteriaBuilder builder = session.getCriteriaBuilder();

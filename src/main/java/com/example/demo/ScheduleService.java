@@ -9,13 +9,28 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 import java.util.List;
 
+/**
+ * Класс обновления значений количества товаров раз в месяц.
+ * Периодичность обновления указывается в @Scheduled(cron = "0 0 13 1 * *").
+ */
 @Component
 public class ScheduleService {
+    /**
+     * Сервис работы с фильтрацией.
+     */
     @Autowired
     private CriteriaService cus;
+    /**
+     * Сервис работы с продуктами.
+     */
     @Autowired
     private ProductService productService;
 
+    /**
+     * Периодичность обновления указывается в @Scheduled(cron = "0 0 13 1 * *").
+     * Метод создает список продуктов и наполняет его товарами конкретной категории, после чего изменяет при помощи
+     * потоков в БД их количество.
+     */
     @SneakyThrows
     @Scheduled(cron = "0 0 13 1 * *")
     @ManagedOperation
